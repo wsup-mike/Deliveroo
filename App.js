@@ -5,12 +5,14 @@ import { NavigationContainer } from "@react-navigation/native";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text className=" text-red-700">
-        Open up App.js to start working on your app!
-      </Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <View style={styles.container}>
+        <Text className=" text-blue-700">
+          Open up App.js to start working on your app! Yay!
+        </Text>
+        <StatusBar style="auto" />
+      </View>
+    </NavigationContainer>
   );
 }
 
