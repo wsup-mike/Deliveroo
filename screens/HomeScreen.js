@@ -1,4 +1,4 @@
-import { View, Text } from "react-native";
+import { View, Text, SafeAreaView } from "react-native";
 import React, { useLayoutEffect } from "react";
 import { useNavigation } from "@react-navigation/core";
 
@@ -12,9 +12,9 @@ const HomeScreen = () => {
   }, []);
 
   return (
-    <View>
+    <SafeAreaView>
       <Text className="text-red-400 ">This is my Home Screen</Text>
-    </View>
+    </SafeAreaView>
   );
 };
 
