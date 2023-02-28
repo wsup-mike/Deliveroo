@@ -1,10 +1,14 @@
 import { View, Text } from "react-native";
 import React from "react";
+import { useNavigation } from "@react-navigation/core";
 
-export default function HomeScreen() {
+const HomeScreen = () => {
+  const navigation = useNavigation();
   return (
     <View>
-      <Text>This is the Home Screen</Text>
+      <Text className="text-red-400">This is my Home Screen</Text>
     </View>
   );
-}
+};
+
+export default HomeScreen;
