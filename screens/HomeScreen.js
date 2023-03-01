@@ -5,6 +5,7 @@ import {
   UserIcon,
   ChevronDownIcon,
   MagnifyingGlassIcon,
+  AdjustmentsVerticalIcon,
 } from "react-native-heroicons/outline";
 
 const HomeScreen = () => {
@@ -36,6 +37,12 @@ const HomeScreen = () => {
           </View>
 
           <UserIcon size={35} color={"#00ccbb"} />
+        </View>
+
+        {/* Search */}
+        <View>
+          <View></View>
+          <AdjustmentsVerticalIcon color={"#00ccbb"} />
         </View>
       </Text>
     </SafeAreaView>
