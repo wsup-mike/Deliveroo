@@ -50,7 +50,7 @@ export default defineType({
       title: 'Category',
       validation: (Rule) => Rule.required(),
       type: 'reference',
-      to: [{type: 'category '}],
+      to: [{type: 'category'}],
     }),
     defineField({
       name: 'dishes',
