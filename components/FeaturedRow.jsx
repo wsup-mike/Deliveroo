@@ -33,6 +33,42 @@ const FeaturedRow = ({ id, title, featuredCategory, description  }) => {
             long={20}
             lat={0}
         />
+        <RestaurantCard 
+            id={123}
+            imgUrl="https://links.papareact.com/gn7"
+            title="Rowie's Bakery"
+            rating={4.5}
+            genre="Filipino Bakery"
+            address="5664 N Lincoln Chicago, IL 60659"
+            short_description="This is a test"
+            dishes={[]}
+            long={20}
+            lat={0}
+        />
+        <RestaurantCard 
+            id={123}
+            imgUrl="https://links.papareact.com/gn7"
+            title="Rowie's Bakery"
+            rating={4.5}
+            genre="Filipino Bakery"
+            address="5664 N Lincoln Chicago, IL 60659"
+            short_description="This is a test"
+            dishes={[]}
+            long={20}
+            lat={0}
+        />
+        <RestaurantCard 
+            id={123}
+            imgUrl="https://links.papareact.com/gn7"
+            title="Rowie's Bakery"
+            rating={4.5}
+            genre="Filipino Bakery"
+            address="5664 N Lincoln Chicago, IL 60659"
+            short_description="This is a test"
+            dishes={[]}
+            long={20}
+            lat={0}
+        />
       </ScrollView>
     </View>
     
