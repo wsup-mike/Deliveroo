@@ -1,4 +1,4 @@
-import { View, Text, SafeAreaView, Image } from "react-native";
+import { View, Text, SafeAreaView, Image, TextInput } from "react-native";
 import React, { useLayoutEffect } from "react";
 import { useNavigation } from "@react-navigation/core";
 import {
@@ -18,7 +18,7 @@ const HomeScreen = () => {
   }, []);
 
   return (
-    <SafeAreaView className="bg-white pt-5">
+    <SafeAreaView className="bg-white">
       <Text className="text-red-400 ">
         {/*Header*/}
         <View className="flex-row pb-3 items-center mx-4 space-x-2">
@@ -41,7 +41,10 @@ const HomeScreen = () => {
 
         {/* Search */}
         <View>
-          <View></View>
+          <View>
+            <MagnifyingGlassIcon />
+            <TextInput />
+          </View>
           <AdjustmentsVerticalIcon color={"#00ccbb"} />
         </View>
       </Text>
