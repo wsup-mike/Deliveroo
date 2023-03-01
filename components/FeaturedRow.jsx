@@ -23,7 +23,7 @@ const FeaturedRow = ({ id, title, featuredCategory, description  }) => {
         {/* Restaurant Cards here */}
         <RestaurantCard 
             id={123}
-            imgUrl='https://links.papareact.com/gn7'
+            imgUrl="https://links.papareact.com/gn7"
             title="Rowie's Bakery"
             rating={4.5}
             genre="Filipino Bakery"

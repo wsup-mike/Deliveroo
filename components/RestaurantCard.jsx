@@ -1,5 +1,5 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { View, Text, TouchableOpacity, Image } from 'react-native'
+import React from 'react';
 
 const RestaurantCard = ({
     id,
@@ -14,9 +14,20 @@ const RestaurantCard = ({
     lat,
 }) => {
   return (
-    <View>
-      <Text>RestaurantCard</Text>
-    </View>
+    <TouchableOpacity>
+        <Image 
+            source={{
+                uri: imgUrl,
+            }}
+            className="h-36 w-64 rounded-md"
+        />
+        <View className="px-3 pb-4">
+            <Text className="font-bold text-lg pt-2">{title}</Text>
+            <View>
+                
+            </View>
+        </View>
+    </TouchableOpacity>
   )
 }
 
