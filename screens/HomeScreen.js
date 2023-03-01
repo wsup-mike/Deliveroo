@@ -60,7 +60,12 @@ const HomeScreen = () => {
       <ScrollView className="bg-gray-100">
         {/* Categories */}
         <Categories />
-        {/* Offers */}
+        {/* Featured Rows */}
+        <FeaturedRow
+          title="Featured"
+          description="Paid placements from our partners"
+          featuredCategory="featured"
+        />
 
         {/* Featured */}
       </ScrollView>
