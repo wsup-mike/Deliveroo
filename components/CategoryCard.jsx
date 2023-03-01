@@ -1,11 +1,13 @@
-import { View, Text } from 'react-native'
+import { View, Text, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
 
-const CategoryCard = () => {
+
+const CategoryCard = ({ imgUri, title }) => {
   return (
-    <View>
-      <Text>Single Category Card</Text>
-    </View>
+    <TouchableOpacity>
+        <Image source={{ uri: imgUri }} />
+        <Text>{title}</Text>
+    </TouchableOpacity>
   )
 }
 

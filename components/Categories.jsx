@@ -14,11 +14,11 @@ const Categories = () => {
     >
       {/* Category Cards here */}
     <Text>Categories (Bitches!)</Text>
-    <CategoryCard imgUrl='https://links.papareact.com/wru' title="Testing" />
-    <CategoryCard imgUrl='https://links.papareact.com/wru' title="Testing" />
-    <CategoryCard imgUrl='https://links.papareact.com/wru' title="Testing" />
-    <CategoryCard imgUrl='https://links.papareact.com/wru' title="Testing" />
-    <CategoryCard imgUrl='https://links.papareact.com/wru' title="Testing" />
+    <CategoryCard imgUrl='https://links.papareact.com/wru' title="Testing1" />
+    <CategoryCard imgUrl='https://links.papareact.com/wru' title="Testing2" />
+    <CategoryCard imgUrl='https://links.papareact.com/wru' title="Testing3" />
+    <CategoryCard imgUrl='https://links.papareact.com/wru' title="Testing4" />
+    <CategoryCard imgUrl='https://links.papareact.com/wru' title="Testing5" />
     </ScrollView>
   )
 }
