@@ -11,8 +11,16 @@ const FeaturedRow = ({ id, title, featuredCategory, description  }) => {
         <ArrowRightIcon color="#00ccbb" />
       </View>
       <Text className="text-xs text-gray-500 px-4">{description}</Text>
-      <ScrollView>
-
+      <ScrollView
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        contentContainerStyle={{
+            paddingHorizontal: 15,
+        }}
+        className="pt-4"
+      >
+        {/* Restaurant Cards here */}
+        
       </ScrollView>
     </View>
     
