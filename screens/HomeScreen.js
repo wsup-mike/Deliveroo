@@ -34,6 +34,8 @@ const HomeScreen = () => {
               <ChevronDownIcon size={20} color={"#00ccbb"} />
             </Text>
           </View>
+
+          <UserIcon size={35} color={"#00ccbb"} />
         </View>
       </Text>
     </SafeAreaView>
