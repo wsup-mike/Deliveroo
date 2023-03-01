@@ -60,7 +60,7 @@ const HomeScreen = () => {
         </View>
 
         {/* Body */}
-        <ScrollView>
+        <ScrollView className="bg-gray-100">
           {/* Categories */}
           <Categories />
           {/* Offers */}
