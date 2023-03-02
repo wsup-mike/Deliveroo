@@ -25,7 +25,7 @@ export default defineType({
     defineField({
       name: 'image',
       title: 'Image of dish',
-      type: 'string',
+      type: 'image',
     }),
   ],
 })

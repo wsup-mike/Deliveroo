@@ -23,7 +23,7 @@ export default defineType({
       type: 'array',
       of: [
         {
-          type: 'refernce',
+          type: 'reference',
           to: [{type: 'restaurant'}],
         },
       ],
