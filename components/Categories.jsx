@@ -14,8 +14,8 @@ const Categories = () => {
     >
       {/* Category Cards here */}
     {/* <Text>Categories (Bitches!)</Text> */}
-    <CategoryCard imgUrl='https://links.papareact.com/gn7' title="TestingA" />
-    <CategoryCard imgUrl='https://links.papareact.com/gn7' title="TestingB" />
+    <CategoryCard imgUrl='https://links.papareact.com/gn7' title="Testing1" />
+    <CategoryCard imgUrl='https://links.papareact.com/gn7' title="Testing2" />
     <CategoryCard imgUrl='https://links.papareact.com/gn7' title="TestingC" />
     <CategoryCard imgUrl='https://links.papareact.com/gn7' title="TestingD" />
     <CategoryCard imgUrl='https://links.papareact.com/gn7' title="TestingE" />
