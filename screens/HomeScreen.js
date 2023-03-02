@@ -16,7 +16,7 @@ import {
 } from "react-native-heroicons/outline";
 import Categories from "../components/Categories";
 import FeaturedRow from "../components/FeaturedRow";
-// import sanityClient from "../sanity";
+import SanityClient from "../sanity";
 
 const HomeScreen = () => {
   const navigation = useNavigation();
