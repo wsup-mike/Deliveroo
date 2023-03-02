@@ -8,3 +8,8 @@ const client = createClient({
   useCdn: true,
   apiVersion: "2021-10-21",
 });
+
+//create an 'image builder'
+const builder = ImageUrlBuilder(client);
+
+export const urlFor = (source) => builder.image(source); // a helper function for later
