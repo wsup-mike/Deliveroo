@@ -1,8 +1,8 @@
-import { SanityClient } from "@sanity/client";
+import { createClient } from "@sanity/client";
 import { ImageUrlBuilder } from "@sanity/image-url";
 
 //connection to backend
-const client = new SanityClient({
+export const client = createClient({
   projectId: "3oz477g8",
   dataset: "production",
   useCdn: true,
@@ -18,4 +18,6 @@ export const urlFor = (source) => builder.image(source); // a helper function fo
 
 // sanity cors add http://localhost:3000
 
-export default client;
+export const projectId = "3oz477g8";
+
+// Sangha Version belol
