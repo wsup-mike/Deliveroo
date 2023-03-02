@@ -16,6 +16,7 @@ import {
 } from "react-native-heroicons/outline";
 import Categories from "../components/Categories";
 import FeaturedRow from "../components/FeaturedRow";
+import { client } from "../sanity";
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -27,24 +28,28 @@ const HomeScreen = () => {
     });
   }, []);
 
-  // useEffect(() => {
-  //   SanityClient.fetch(
-  //     `
-  //   *[_type == "featured"] {
-  //     ...,
-  //     restaurants[]->{
-  //       ...,
-  //       dishes[]->,
-  //       type->{
-  //         name
-  //       }
-  //     },
-  //   }
-  //   `
-  //   ).then((data) => {
-  //     setFeaturedCategories(data);
-  //   });
-  // }, []);
+  useEffect(() => {
+    client
+      .fetch(
+        `
+          *[_type == "featured"] {
+            ...,
+            restaurants[]->{
+              ...,
+              dishes[]->,
+              type->{
+                name
+              }
+            },
+          }
+        `
+      )
+      .then((data) => {
+        setFeaturedCategories(data);
+      });
+  }, []);
+
+  console.log(featuredCategories);
 
   return (
     <SafeAreaView className="bg-white pt-5">
