@@ -29,9 +29,8 @@ const HomeScreen = () => {
   }, []);
 
   // useEffect(() => {
-  //   sanityClient
-  //     .fetch(
-  //       `
+  //   SanityClient.fetch(
+  //     `
   //   *[_type == "featured"] {
   //     ...,
   //     restaurants[]->{
@@ -43,10 +42,9 @@ const HomeScreen = () => {
   //     },
   //   }
   //   `
-  //     )
-  //     .then((data) => {
-  //       setFeaturedCategories(data);
-  //     });
+  //   ).then((data) => {
+  //     setFeaturedCategories(data);
+  //   });
   // }, []);
 
   return (
