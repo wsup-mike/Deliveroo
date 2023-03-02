@@ -13,3 +13,9 @@ const client = createClient({
 const builder = ImageUrlBuilder(client);
 
 export const urlFor = (source) => builder.image(source); // a helper function for later
+
+// Run this to add exceptin for localhost 3000 CORS policy (cd into sanity folder and run command below for: 3000, 3333 and 19006)
+
+// sanity cors add http://localhost:3000
+
+export default client;
