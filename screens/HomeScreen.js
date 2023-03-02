@@ -16,7 +16,7 @@ import {
 } from "react-native-heroicons/outline";
 import Categories from "../components/Categories";
 import FeaturedRow from "../components/FeaturedRow";
-import { SanityClient } from "@sanity/client";
+import sanityClient from "../sanity";
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -29,7 +29,24 @@ const HomeScreen = () => {
   }, []);
 
   useEffect(() => {
-    SanityClient.fetch;
+    sanityClient
+      .fetch(
+        `
+    *[_type == "featured"] {
+      ...,
+      restaurants[]->{
+        ...,
+        dishes[]->,
+        type->{
+          name
+        }
+      },
+    }
+    `
+      )
+      .then((data) => {
+        setFeaturedCategories(data);
+      });
   }, []);
 
   return (
