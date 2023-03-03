@@ -18,9 +18,10 @@ import Categories from "../components/Categories";
 import FeaturedRow from "../components/FeaturedRow";
 import { client } from "../sanity";
 import "url-search-params-polyfill";
-import { URL } from "whatwg-url";
+import querystring from "querystring";
+// import { URL } from "whatwg-url";
 
-global.URL = URL;
+// global.URL = URL;
 
 console.log(client);
 
@@ -74,14 +75,14 @@ const HomeScreen = () => {
       )
       .then((data) => {
         // Replace URLSearchParams usage with querystring
-        // const parsedData = JSON.parse(
-        //   JSON.stringify(data).replace(/\bURLSearchParams\b/g, "querystring")
-        // );
-        // use new instance URLSearchParams
-        const params = new URLSearchParams();
         const parsedData = JSON.parse(
-          JSON.stringify(data).replace(/\bURLSearchParams\b/g, "params")
+          JSON.stringify(data).replace(/\bURLSearchParams\b/g, "querystring")
         );
+        // use new instance URLSearchParams
+        // const params = new URLSearchParams();
+        // const parsedData = JSON.parse(
+        //   JSON.stringify(data).replace(/\bURLSearchParams\b/g, "params")
+        // );
         setFeaturedCategories(parsedData);
         console.log(featuredCategories);
       });
