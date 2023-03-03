@@ -18,6 +18,7 @@ import Categories from "../components/Categories";
 import FeaturedRow from "../components/FeaturedRow";
 import { client } from "../sanity";
 // import "url-search-params-polyfill";
+import "react-native-url-polyfill/auto";
 import querystring from "querystring";
 // import { URL } from "whatwg-url";
 
