@@ -17,7 +17,7 @@ import {
 import Categories from "../components/Categories";
 import FeaturedRow from "../components/FeaturedRow";
 import { client } from "../sanity";
-import querystring from "querystring";
+import "url-search-params-polyfill";
 
 console.log(client);
 
