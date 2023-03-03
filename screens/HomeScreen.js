@@ -18,6 +18,8 @@ import Categories from "../components/Categories";
 import FeaturedRow from "../components/FeaturedRow";
 import { client } from "../sanity";
 
+console.log(client);
+
 const HomeScreen = () => {
   const navigation = useNavigation();
   const [featuredCategories, setFeaturedCategories] = useState([]);
@@ -29,10 +31,25 @@ const HomeScreen = () => {
   }, []);
 
   useEffect(() => {
-    alert("hello!");
+    client
+      .fetch(
+        `
+      *[_type == "featured"] {
+        ...,
+        restaurants[]->{
+          ...,
+          dishes[]->,
+          type->{
+            name
+          }
+        },
+      }
+    `
+      )
+      .then((data) => setFeaturedCategories(data));
   }, []);
 
-  console.log(featuredCategories);
+  // console.log(featuredCategories);
 
   return (
     <SafeAreaView className="bg-white pt-5">
