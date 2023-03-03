@@ -11432,6 +11432,11 @@
     "querystringify" "^2.1.1"
     "requires-port" "^1.0.0"
 
+"url-search-params-polyfill@^8.1.1":
+  "integrity" "sha512-KmkCs6SjE6t4ihrfW9JelAPQIIIFbJweaaSLTh/4AO+c58JlDcb+GbdPt8yr5lRcFg4rPswRFRRhBGpWwh0K/Q=="
+  "resolved" "https://registry.npmjs.org/url-search-params-polyfill/-/url-search-params-polyfill-8.1.1.tgz"
+  "version" "8.1.1"
+
 "use-callback-ref@^1.3.0":
   "integrity" "sha512-3FT9PRuRdbB9HfXhEq35u4oZkvpJ5kuYbpqhCfmiZyReuRgpnhDlbr2ZEnnuS0RrJAPn6l23xjFg9kpDM+Ms7w=="
   "resolved" "https://registry.npmjs.org/use-callback-ref/-/use-callback-ref-1.3.0.tgz"
