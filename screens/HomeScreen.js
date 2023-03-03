@@ -18,7 +18,7 @@ import Categories from "../components/Categories";
 import FeaturedRow from "../components/FeaturedRow";
 import { client } from "../sanity";
 
-console.log(client);
+// console.log(client);
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -46,10 +46,11 @@ const HomeScreen = () => {
       }
     `
       )
-      .then((data) => setFeaturedCategories(data));
+      .then((data) => {
+        setFeaturedCategories(data);
+        console.log(featuredCategories);
+      });
   }, []);
-
-  // console.log(featuredCategories);
 
   return (
     <SafeAreaView className="bg-white pt-5">
