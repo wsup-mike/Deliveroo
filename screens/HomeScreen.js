@@ -17,8 +17,9 @@ import {
 import Categories from "../components/Categories";
 import FeaturedRow from "../components/FeaturedRow";
 import { client } from "../sanity";
+import querystring from "querystring";
 
-// console.log(client);
+console.log(client);
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -30,24 +31,50 @@ const HomeScreen = () => {
     });
   }, []);
 
+  // useEffect(() => {
+  //   client
+  //     .fetch(
+  //       `
+  //         *[_type == "featured"] {
+  //           ...,
+  //           restaurants[]->{
+  //             ...,
+  //             dishes[]->,
+  //             type->{
+  //               name
+  //             }
+  //           },
+  //         }
+  //       `
+  //     )
+  //     .then((data) => {
+  //       setFeaturedCategories(data);
+  //       console.log(featuredCategories);
+  //     });
+  // }, []);
+
   useEffect(() => {
     client
       .fetch(
         `
-      *[_type == "featured"] {
-        ...,
-        restaurants[]->{
-          ...,
-          dishes[]->,
-          type->{
-            name
+          *[_type == "featured"] {
+            ...,
+            restaurants[]->{
+              ...,
+              dishes[]->,
+              type->{
+                name
+              }
+            },
           }
-        },
-      }
-    `
+        `
       )
       .then((data) => {
-        setFeaturedCategories(data);
+        // Replace URLSearchParams usage with querystring
+        const parsedData = JSON.parse(
+          JSON.stringify(data).replace(/\bURLSearchParams\b/g, "querystring")
+        );
+        setFeaturedCategories(parsedData);
         console.log(featuredCategories);
       });
   }, []);
