@@ -17,7 +17,7 @@ import {
 import Categories from "../components/Categories";
 import FeaturedRow from "../components/FeaturedRow";
 import { client } from "../sanity";
-import "url-search-params-polyfill";
+// import "url-search-params-polyfill";
 import querystring from "querystring";
 // import { URL } from "whatwg-url";
 
