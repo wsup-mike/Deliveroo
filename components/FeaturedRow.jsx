@@ -1,5 +1,5 @@
 import { View, Text, ScrollView } from 'react-native'
-import React from 'react'
+import React, { useEffect, useState, useLayoutEffect } from 'react'
 import { ArrowRightIcon } from 'react-native-heroicons/outline'
 import RestaurantCard from './RestaurantCard';
 import { client } from '../sanity';
@@ -8,6 +8,8 @@ import querystring from "querystring";
 
 
 const FeaturedRow = ({ id, title, featuredCategory, description  }) => {
+  
+
   return (
     <View>
       <View className="mt-4 flex-row items-center justify-between px-4">
