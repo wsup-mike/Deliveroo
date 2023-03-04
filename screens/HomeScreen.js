@@ -59,7 +59,6 @@ const HomeScreen = () => {
         );
 
         setFeaturedCategories(parsedData);
-        console.log(featuredCategories);
       } catch (error) {
         console.error(error);
       }
@@ -67,6 +66,8 @@ const HomeScreen = () => {
 
     fetchData();
   }, []);
+
+  console.log(featuredCategories);
 
   // useEffect(() => {
   //   client
