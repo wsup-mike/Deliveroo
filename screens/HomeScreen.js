@@ -75,37 +75,6 @@ const HomeScreen = () => {
   //   .then((data) => console.log(data))
   //   .catch((error) => console.error(error));
 
-  // useEffect(() => {
-  //   client
-  //     .fetch(
-  //       `
-  //         *[_type == "featured"] {
-  //           ...,
-  //           restaurants[]->{
-  //             ...,
-  //             dishes[]->,
-  //             type->{
-  //               name
-  //             }
-  //           },
-  //         }
-  //       `
-  //     )
-  //     .then((data) => {
-  //       // Replace URLSearchParams usage with querystring
-  //       const parsedData = JSON.parse(
-  //         JSON.stringify(data).replace(/\bURLSearchParams\b/g, "querystring")
-  //       );
-  //       // use new instance URLSearchParams
-  //       // const params = new URLSearchParams();
-  //       // const parsedData = JSON.parse(
-  //       //   JSON.stringify(data).replace(/\bURLSearchParams\b/g, "params")
-  //       // );
-  //       setFeaturedCategories(parsedData);
-  //       console.log(featuredCategories);
-  //     });
-  // }, []);
-
   return (
     <SafeAreaView className="bg-white pt-5">
       {/*Header*/}
