@@ -36,6 +36,38 @@ const HomeScreen = () => {
     });
   }, []);
 
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const data = await client.fetch(
+          `
+            *[_type == "featured"] {
+              ...,
+              restaurants[]->{
+                ...,
+                dishes[]->,
+                type->{
+                  name
+                }
+              },
+            }
+          `
+        );
+
+        const parsedData = JSON.parse(
+          JSON.stringify(data).replace(/\bURLSearchParams\b/g, "querystring")
+        );
+
+        setFeaturedCategories(parsedData);
+        console.log(featuredCategories);
+      } catch (error) {
+        console.error(error);
+      }
+    }
+
+    fetchData();
+  }, []);
+
   // useEffect(() => {
   //   client
   //     .fetch(
@@ -53,41 +85,19 @@ const HomeScreen = () => {
   //       `
   //     )
   //     .then((data) => {
-  //       setFeaturedCategories(data);
+  //       // Replace URLSearchParams usage with querystring
+  //       const parsedData = JSON.parse(
+  //         JSON.stringify(data).replace(/\bURLSearchParams\b/g, "querystring")
+  //       );
+  //       // use new instance URLSearchParams
+  //       // const params = new URLSearchParams();
+  //       // const parsedData = JSON.parse(
+  //       //   JSON.stringify(data).replace(/\bURLSearchParams\b/g, "params")
+  //       // );
+  //       setFeaturedCategories(parsedData);
   //       console.log(featuredCategories);
   //     });
   // }, []);
-
-  useEffect(() => {
-    client
-      .fetch(
-        `
-          *[_type == "featured"] {
-            ...,
-            restaurants[]->{
-              ...,
-              dishes[]->,
-              type->{
-                name
-              }
-            },
-          }
-        `
-      )
-      .then((data) => {
-        // Replace URLSearchParams usage with querystring
-        const parsedData = JSON.parse(
-          JSON.stringify(data).replace(/\bURLSearchParams\b/g, "querystring")
-        );
-        // use new instance URLSearchParams
-        // const params = new URLSearchParams();
-        // const parsedData = JSON.parse(
-        //   JSON.stringify(data).replace(/\bURLSearchParams\b/g, "params")
-        // );
-        setFeaturedCategories(parsedData);
-        console.log(featuredCategories);
-      });
-  }, []);
 
   return (
     <SafeAreaView className="bg-white pt-5">
