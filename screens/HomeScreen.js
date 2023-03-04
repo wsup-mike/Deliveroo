@@ -24,7 +24,7 @@ import querystring from "querystring";
 
 // global.URL = URL;
 
-console.log(client);
+// console.log(client);
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -52,6 +52,7 @@ const HomeScreen = () => {
               },
             }
           `
+          // `*[_type == "featured"]`
         );
 
         const parsedData = JSON.parse(
@@ -68,6 +69,11 @@ const HomeScreen = () => {
   }, []);
 
   console.log(featuredCategories);
+
+  // client
+  //   .fetch('*[_type == "restaurant"]')
+  //   .then((data) => console.log(data))
+  //   .catch((error) => console.error(error));
 
   // useEffect(() => {
   //   client
