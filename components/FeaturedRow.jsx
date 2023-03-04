@@ -64,7 +64,7 @@ const FeaturedRow = ({ id, title, featuredCategory, description  }) => {
         })}
 
 
-
+{/* 
         <RestaurantCard 
             id={123}
             imgUrl="https://links.papareact.com/gn7"
@@ -112,7 +112,7 @@ const FeaturedRow = ({ id, title, featuredCategory, description  }) => {
             dishes={[]}
             long={20}
             lat={0}
-        />
+        /> */}
       </ScrollView>
     </View>
     
