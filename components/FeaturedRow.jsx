@@ -13,7 +13,7 @@ const FeaturedRow = ({ id, title, featuredCategory, description  }) => {
   useEffect(() => {
     async function fetchData() {
       try { 
-        const data = await client.fetch();
+        const data = await client.fetch(`*[_type == "restaurant"]`);
 
         const parsedData = JSON.parse(
           JSON.stringify(data).replace(/\bURLSearchParams\b/g, "querystring")
@@ -27,6 +27,8 @@ const FeaturedRow = ({ id, title, featuredCategory, description  }) => {
 
     fetchData();
   }, []);
+
+  
 
   return (
     <View>
