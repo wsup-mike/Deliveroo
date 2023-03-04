@@ -8,7 +8,7 @@ import querystring from "querystring";
 
 
 const FeaturedRow = ({ id, title, featuredCategory, description  }) => {
-  
+  const [featuredRow, setFeaturedRow] = useState([]);
 
   return (
     <View>
