@@ -3,6 +3,7 @@ import React from 'react'
 import { ArrowRightIcon } from 'react-native-heroicons/outline'
 import RestaurantCard from './RestaurantCard';
 import { client } from '../sanity';
+import "react-native-url-polyfill/auto";
 
 
 const FeaturedRow = ({ id, title, featuredCategory, description  }) => {
