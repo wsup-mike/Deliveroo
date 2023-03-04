@@ -10,6 +10,24 @@ import querystring from "querystring";
 const FeaturedRow = ({ id, title, featuredCategory, description  }) => {
   const [featuredRow, setFeaturedRow] = useState([]);
 
+  useEffect(() => {
+    async function fetchData() {
+      try { 
+        const data = await client.fetch();
+
+        const parsedData = JSON.parse(
+          JSON.stringify(data).replace(/\bURLSearchParams\b/g, "querystring")
+        );
+
+        setFeaturedRow(parsedData)
+      } catch (error) {
+        console.error(error);
+      }
+    }
+
+    fetchData();
+  }, []);
+
   return (
     <View>
       <View className="mt-4 flex-row items-center justify-between px-4">
