@@ -2,6 +2,7 @@ import { View, Text, ScrollView } from 'react-native'
 import React from 'react'
 import { ArrowRightIcon } from 'react-native-heroicons/outline'
 import RestaurantCard from './RestaurantCard';
+import { client } from '../sanity';
 
 
 const FeaturedRow = ({ id, title, featuredCategory, description  }) => {
@@ -21,6 +22,7 @@ const FeaturedRow = ({ id, title, featuredCategory, description  }) => {
         className="pt-4"
       >
         {/* Restaurant Cards here */}
+        {}
         <RestaurantCard 
             id={123}
             imgUrl="https://links.papareact.com/gn7"
