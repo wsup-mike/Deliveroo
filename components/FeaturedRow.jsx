@@ -28,7 +28,7 @@ const FeaturedRow = ({ id, title, featuredCategory, description  }) => {
     fetchData();
   }, []);
 
-  
+  console.log(featuredRow);
 
   return (
     <View>
