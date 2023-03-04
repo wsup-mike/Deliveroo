@@ -68,7 +68,7 @@ const HomeScreen = () => {
     fetchData();
   }, []);
 
-  console.log(featuredCategories);
+  // console.log(featuredCategories);
 
   // client
   //   .fetch('*[_type == "restaurant"]')
@@ -111,6 +111,15 @@ const HomeScreen = () => {
         {/* Categories */}
         <Categories />
         {/* Featured Rows */}
+        {featuredCategories?.map((category) => (
+          <FeaturedRow
+            key={category._id}
+            id={category._id}
+            title={category.name}
+            description={category.short_description}
+          />
+        ))}
+
         <FeaturedRow
           id="123"
           title="Featured"
