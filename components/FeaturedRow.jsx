@@ -46,7 +46,25 @@ const FeaturedRow = ({ id, title, featuredCategory, description  }) => {
         className="pt-4"
       >
         {/* Restaurant Cards here */}
-        {}
+        {featuredRow?.map((restaurant) => {
+          <RestaurantCard 
+            key={restaurant._id}
+            id={restaurant._id}
+            // imgUrl={restaurant.}
+            image={restaurant.image}
+            title={restaurant.name}
+            rating={restaurant.rating}
+            // genre={restaurant.}
+            address={restaurant.address}
+            short_description={restaurant.short_description}
+            dishes={[restaurant.dishes]}
+            long={restaurant.long}
+            lat={restaurant.lat}
+          />
+        })}
+
+
+
         <RestaurantCard 
             id={123}
             imgUrl="https://links.papareact.com/gn7"
