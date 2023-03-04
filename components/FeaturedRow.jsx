@@ -4,6 +4,7 @@ import { ArrowRightIcon } from 'react-native-heroicons/outline'
 import RestaurantCard from './RestaurantCard';
 import { client } from '../sanity';
 import "react-native-url-polyfill/auto";
+import querystring from "querystring";
 
 
 const FeaturedRow = ({ id, title, featuredCategory, description  }) => {
