@@ -19,18 +19,19 @@ const FeaturedRow = ({ id, title, featuredCategory, description  }) => {
   useEffect(() => {
     async function fetchData() {
       try { 
-        const data = await client.fetch(`
-          *[_type == "featured" && _id == $id] {
+        const data = await client.fetch(
+          `
+          *[_type == "featured" ] {
             ...,
             restaurants[]->{
               ...,
               dishes[]->,
-              type->{
+              type-> {
                 name
               }
             },
           } [0]
-        `, { id }
+          `
         );
 
         const parsedData = JSON.parse(
@@ -64,7 +65,7 @@ const FeaturedRow = ({ id, title, featuredCategory, description  }) => {
         className="pt-4"
       >
         {/* Restaurant Cards here */}
-        {featuredRow?.map((restaurant) => {
+        {featuredRow?.map((restaurant) => (
           <RestaurantCard 
             key={restaurant._id}
             id={restaurant._id}
@@ -79,61 +80,9 @@ const FeaturedRow = ({ id, title, featuredCategory, description  }) => {
             long={restaurant.long}
             lat={restaurant.lat}
           />
-        })}
-
-
-{/* 
-        <RestaurantCard 
-            id={123}
-            imgUrl="https://links.papareact.com/gn7"
-            title="Rowie's Bakery"
-            rating={4.5}
-            genre="Filipino Bakery"
-            address="5664 N Lincoln Chicago, IL 60659"
-            short_description="This is a test"
-            dishes={[]}
-            long={20}
-            lat={0}
-        />
-        <RestaurantCard 
-            id={123}
-            imgUrl="https://links.papareact.com/gn7"
-            title="Rowie's Bakery"
-            rating={4.5}
-            genre="Filipino Bakery"
-            address="5664 N Lincoln Chicago, IL 60659"
-            short_description="This is a test"
-            dishes={[]}
-            long={20}
-            lat={0}
-        />
-        <RestaurantCard 
-            id={123}
-            imgUrl="https://links.papareact.com/gn7"
-            title="Rowie's Bakery"
-            rating={4.5}
-            genre="Filipino Bakery"
-            address="5664 N Lincoln Chicago, IL 60659"
-            short_description="This is a test"
-            dishes={[]}
-            long={20}
-            lat={0}
-        />
-        <RestaurantCard 
-            id={123}
-            imgUrl="https://links.papareact.com/gn7"
-            title="Rowie's Bakery"
-            rating={4.5}
-            genre="Filipino Bakery"
-            address="5664 N Lincoln Chicago, IL 60659"
-            short_description="This is a test"
-            dishes={[]}
-            long={20}
-            lat={0}
-        /> */}
+        ))}
       </ScrollView>
     </View>
-    
   )
 }
 
