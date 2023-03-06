@@ -47,10 +47,7 @@ const FeaturedRow = ({ id, title, featuredCategory, description  }) => {
         console.error(error);
       }
     }
-
     fetchData();
-    
-    
   }, []);
 
   console.log(restaurants)
