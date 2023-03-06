@@ -60,6 +60,7 @@ const HomeScreen = () => {
         );
 
         setFeaturedCategories(parsedData);
+        // console.log(featuredCategories);
       } catch (error) {
         console.error(error);
       }
