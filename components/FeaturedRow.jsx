@@ -16,38 +16,37 @@ import querystring from "querystring";
 const FeaturedRow = ({ id, title, description  }) => {
   const [restaurants, setRestaurants] = useState([]);
 
-  useEffect(() => {
-    async function fetchData() {
-      try { 
-        const data = await client.fetch(
-          `
-            *[ _type == 'featured' && _id == $id] {
-              ...,
-              restaurants[]->{
-                ...,
-                dishes[]->,
-                type=> {
-                  name
-                }
-              },
-            }[0]
-          `  , { id: id } // were passing in id into the query itself
-        )
+  // useEffect(() => {
+  //   async function fetchData() {
+  //     try { 
+  //       const data = await client.fetch(
+  //         `
+  //           *[ _type == 'featured' && _id == $id] {
+  //             ...,
+  //             restaurants[]->{
+  //               ...,
+  //               dishes[]->,
+  //               type=> {
+  //                 name
+  //               }
+  //             },
+  //           }[0]
+  //         `  , { id: id } // were passing in id into the query itself
+  //       )
       
-        const parsedData = JSON.parse(
-          JSON.stringify(data).replace(/\bURLSearchParams\b/g, "querystring")
-        );
+  //       const parsedData = JSON.parse(
+  //         JSON.stringify(data).replace(/\bURLSearchParams\b/g, "querystring")
+  //       );
 
-        setRestaurants(parsedData)
-        console.log(restaurants)
-        console.log(parsedData)
-      } catch (error) {
-        console.error(error);
-      }
-    }
-    fetchData();
+  //       setRestaurants(parsedData)
+        
+  //     } catch (error) {
+  //       console.error(error);
+  //     }
+  //   }
+  //   fetchData();
     
-  }, []);
+  // }, []);
 
     
   // console.log(restaurants)
