@@ -16,38 +16,38 @@ import querystring from "querystring";
 const FeaturedRow = ({ id, title, featuredCategory, description  }) => {
   const [featuredRow, setFeaturedRow] = useState([]);
 
-  useEffect(() => {
-    async function fetchData() {
-      try { 
-        const data = await client.fetch(
-          `
-          *[_type == "featured" ] {
-            ...,
-            restaurants[]->{
-              ...,
-              dishes[]->,
-              type-> {
-                name
-              }
-            },
-          } [0]
-          `
-        );
+  // useEffect(() => {
+  //   async function fetchData() {
+  //     try { 
+  //       const data = await client.fetch(
+  //         `
+  //         *[_type == "featured" ] {
+  //           ...,
+  //           restaurants[]->{
+  //             ...,
+  //             dishes[]->,
+  //             type-> {
+  //               name
+  //             }
+  //           },
+  //         } [0]
+  //         `
+  //       );
 
-        const parsedData = JSON.parse(
-          JSON.stringify(data).replace(/\bURLSearchParams\b/g, "querystring")
-        );
+  //       const parsedData = JSON.parse(
+  //         JSON.stringify(data).replace(/\bURLSearchParams\b/g, "querystring")
+  //       );
 
-        setFeaturedRow(parsedData)
-      } catch (error) {
-        console.error(error);
-      }
-    }
+  //       setFeaturedRow(parsedData)
+  //     } catch (error) {
+  //       console.error(error);
+  //     }
+  //   }
 
-    fetchData();
-  }, []);
+  //   fetchData();
+  // }, []);
 
-  console.log(featuredRow);
+  console.log(client);
 
   return (
     <View>
