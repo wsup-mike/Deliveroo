@@ -1,5 +1,5 @@
 import { View, Text, ScrollView } from 'react-native'
-import React, { useEffect, useState, useLayoutEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { ArrowRightIcon } from 'react-native-heroicons/outline'
 import RestaurantCard from './RestaurantCard';
 import { client } from '../sanity';
@@ -14,42 +14,44 @@ import querystring from "querystring";
 // a0cb9eb9-22c2-4df3-a8bc-0c2f1e79de2a
 
 const FeaturedRow = ({ id, title, featuredCategory, description  }) => {
-  const [restaurant, setRestaurant] = useState([]);
+  const [restaurants, setRestaurants] = useState([]);
 
 
   useEffect(() => {
     async function fetchData() {
       try { 
         const data = await client.fetch(
-  //         `
-  //         *[_type == "featured" ] {
-  //           ...,
-  //           restaurants[]->{
-  //             ...,
-  //             dishes[]->,
-  //             type-> {
-  //               name
-  //             }
-  //           },
-  //         } [0]
-  //         `
-            `
-            *[_type == "featured" ] 
-            `
-        );
+          `
+          *[_type == "featured" && _id == $id ] {
+            ...,
+            restaurants[]->{
+              ...,
+              dishes[]->,
+              type-> {
+                name
+              }
+            },
+          } [0]
+          `
+            // `
+            // *[_type == "featured" ] 
+            // `
+        , { id: id })
 
         const parsedData = JSON.parse(
           JSON.stringify(data).replace(/\bURLSearchParams\b/g, "querystring")
         );
 
-        setRestaurant(parsedData)
+        setRestaurants(parsedData)
+        
       } catch (error) {
         console.error(error);
       }
     }
 
     fetchData();
-    console.log(restaurant);
+    console.log(restaurants)
+    
   }, []);
 
   
@@ -61,32 +63,34 @@ const FeaturedRow = ({ id, title, featuredCategory, description  }) => {
         <ArrowRightIcon color="#00ccbb" />
       </View>
       <Text className="text-xs text-gray-500 px-4">{description}</Text>
-      <ScrollView
-        horizontal
-        showsHorizontalScrollIndicator={false}
-        contentContainerStyle={{
-            paddingHorizontal: 15,
-        }}
-        className="pt-4"
-      >
-        {/* Restaurant Cards here */}
-        {featuredRow?.map((restaurant) => (
-          <RestaurantCard 
-            key={restaurant._id}
-            id={restaurant._id}
-            // imgUrl={restaurant.}
-            image={restaurant.image}
-            title={restaurant.name}
-            rating={restaurant.rating}
-            // genre={restaurant.}
-            address={restaurant.address}
-            short_description={restaurant.short_description}
-            dishes={[restaurant.dishes]}
-            long={restaurant.long}
-            lat={restaurant.lat}
-          />
-        ))}
-      </ScrollView>
+      
+      {restaurants.length > 0 && (
+        <ScrollView
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          contentContainerStyle={{
+              paddingHorizontal: 15,
+          }}
+          className="pt-4"
+        >
+          {/* Restaurant Cards here */}
+          {restaurants?.map((restaurant) => (
+            <RestaurantCard 
+              key={restaurant._id}
+              id={restaurant._id}
+              imgUrl={restaurant.image}
+              title={restaurant.name}
+              rating={restaurant.rating}
+              genre={restaurant.type?.name}
+              address={restaurant.address}
+              short_description={restaurant.short_description}
+              dishes={restaurant.dishes}
+              long={restaurant.long}
+              lat={restaurant.lat}
+            />
+          ))}
+        </ScrollView>
+      )}
     </View>
   )
 }
