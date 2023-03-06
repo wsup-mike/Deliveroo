@@ -14,7 +14,7 @@ import querystring from "querystring";
 // a0cb9eb9-22c2-4df3-a8bc-0c2f1e79de2a
 
 const FeaturedRow = ({ id, title, featuredCategory, description  }) => {
-  const [featuredRow, setFeaturedRow] = useState([]);
+  const [restaurant, setRestaurant] = useState([]);
 
 
   useEffect(() => {
@@ -42,14 +42,14 @@ const FeaturedRow = ({ id, title, featuredCategory, description  }) => {
           JSON.stringify(data).replace(/\bURLSearchParams\b/g, "querystring")
         );
 
-        setFeaturedRow(parsedData)
+        setRestaurant(parsedData)
       } catch (error) {
         console.error(error);
       }
     }
 
     fetchData();
-    console.log(parsedData);
+    console.log(restaurant);
   }, []);
 
   
