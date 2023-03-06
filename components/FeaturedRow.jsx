@@ -21,16 +21,7 @@ const FeaturedRow = ({ id, title, featuredCategory, description  }) => {
       try { 
         const data = await client.fetch(
           `
-          *[_type == "featured" && _id == $id ] {
-            ...,
-            restaurants[]->{
-              ...,
-              dishes[]->,
-              type-> {
-                name
-              }
-            },
-          } [0]
+            *[ _type == 'featured' ]
           `
             // `
             // *[_type == "featured" ] 
@@ -50,8 +41,11 @@ const FeaturedRow = ({ id, title, featuredCategory, description  }) => {
     fetchData();
   }, []);
 
-  console.log(restaurants)
-
+  // console.log(restaurants)
+  // useEffect(() => {
+  //   console.log(restaurants)
+  // }, [restaurants]);
+  
   return (
     <View>
       <View className="mt-4 flex-row items-center justify-between px-4">
@@ -60,7 +54,7 @@ const FeaturedRow = ({ id, title, featuredCategory, description  }) => {
       </View>
       <Text className="text-xs text-gray-500 px-4">{description}</Text>
       
-      {restaurants.length > 0 && (
+      {/* {restaurants.length > 0 && ( */}
         <ScrollView
           horizontal
           showsHorizontalScrollIndicator={false}
@@ -86,7 +80,7 @@ const FeaturedRow = ({ id, title, featuredCategory, description  }) => {
             />
           ))}
         </ScrollView>
-      )}
+      {/* )} */}
     </View>
   )
 }
