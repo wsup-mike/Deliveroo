@@ -68,8 +68,6 @@ const HomeScreen = () => {
     fetchData();
   }, []);
 
-  // console.log(featuredCategories);
-
   // client
   //   .fetch('*[_type == "restaurant"]')
   //   .then((data) => console.log(data))
