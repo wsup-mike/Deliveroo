@@ -13,7 +13,7 @@ import querystring from "querystring";
 // 474cd9ae-ad57-41ce-a8c8-404e78a3963b
 // a0cb9eb9-22c2-4df3-a8bc-0c2f1e79de2a
 
-const FeaturedRow = ({ id, title, featuredCategory, description  }) => {
+const FeaturedRow = ({ id, title, description  }) => {
   const [restaurants, setRestaurants] = useState([]);
 
   useEffect(() => {
@@ -21,30 +21,40 @@ const FeaturedRow = ({ id, title, featuredCategory, description  }) => {
       try { 
         const data = await client.fetch(
           `
-            *[ _type == 'featured' ]
-          `
-            // `
-            // *[_type == "featured" ] 
-            // `
-        , { id: id })
-
+            *[ _type == 'featured' && _id == $id] {
+              ...,
+              restaurants[]->{
+                ...,
+                dishes[]->,
+                type=> {
+                  name
+                }
+              },
+            }[0]
+          `  , { id: id } // were passing in id into the query itself
+        )
+      
         const parsedData = JSON.parse(
           JSON.stringify(data).replace(/\bURLSearchParams\b/g, "querystring")
         );
 
         setRestaurants(parsedData)
-        
+        console.log(restaurants)
+        console.log(parsedData)
       } catch (error) {
         console.error(error);
       }
     }
     fetchData();
+    
   }, []);
 
+    
   // console.log(restaurants)
-  useEffect(() => {
-    console.log(`Here's the 'restaurant' object logging from the useEffect: ${restaurants} `)
-  }, [restaurants]);
+  // useEffect(() => {
+  //   console.log(`Here's the 'restaurants' state array logging from the useEffect: ${restaurants.name} `)
+  // }, [restaurants]);
+  
   
   return (
     <View>
