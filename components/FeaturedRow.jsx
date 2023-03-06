@@ -42,9 +42,9 @@ const FeaturedRow = ({ id, title, featuredCategory, description  }) => {
   }, []);
 
   // console.log(restaurants)
-  // useEffect(() => {
-  //   console.log(restaurants)
-  // }, [restaurants]);
+  useEffect(() => {
+    console.log(`Here's the 'restaurant' object logging from the useEffect: ${restaurants} `)
+  }, [restaurants]);
   
   return (
     <View>
