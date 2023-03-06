@@ -16,7 +16,6 @@ import querystring from "querystring";
 const FeaturedRow = ({ id, title, featuredCategory, description  }) => {
   const [restaurants, setRestaurants] = useState([]);
 
-
   useEffect(() => {
     async function fetchData() {
       try { 
@@ -50,11 +49,11 @@ const FeaturedRow = ({ id, title, featuredCategory, description  }) => {
     }
 
     fetchData();
-    console.log(restaurants)
+    
     
   }, []);
 
-  
+  console.log(restaurants)
 
   return (
     <View>
