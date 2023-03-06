@@ -54,7 +54,7 @@ const FeaturedRow = ({ id, title, featuredCategory, description  }) => {
       </View>
       <Text className="text-xs text-gray-500 px-4">{description}</Text>
       
-      {/* {restaurants.length > 0 && ( */}
+      {restaurants.length > 0 && (
         <ScrollView
           horizontal
           showsHorizontalScrollIndicator={false}
@@ -80,7 +80,7 @@ const FeaturedRow = ({ id, title, featuredCategory, description  }) => {
             />
           ))}
         </ScrollView>
-      {/* )} */}
+      )}
     </View>
   )
 }
