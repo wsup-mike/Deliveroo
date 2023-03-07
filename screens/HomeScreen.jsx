@@ -26,6 +26,7 @@ import querystring from "querystring";
 
 // console.log(client);
 
+
 const HomeScreen = () => {
   const navigation = useNavigation();
   const [featuredCategories, setFeaturedCategories] = useState([]);
