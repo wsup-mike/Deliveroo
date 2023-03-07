@@ -1,8 +1,11 @@
 import { View, Text, ScrollView } from 'react-native'
-import React from 'react'
+import React, { useEffect } from 'react'
 import CategoryCard from './CategoryCard';
 
+
 const Categories = () => {
+
+ 
   return (
     <ScrollView
       horizontal 
