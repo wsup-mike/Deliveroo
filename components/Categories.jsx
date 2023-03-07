@@ -9,13 +9,13 @@ import { urlFor } from '../sanityUrl';
 const Categories = () => {
   const [categories, setCategories] = useState([]);
 
-  useEffect(() => {
-    client.fetch(`
-      *[_type == 'category']
-    `).then(data => {
-      setCategories(data)
-    })
-  }, []);
+  // useEffect(() => {
+  //   client.fetch(`
+  //     *[_type == 'category']
+  //   `).then(data => {
+  //     setCategories(data)
+  //   })
+  // }, []);
  
   return (
     <ScrollView
@@ -28,18 +28,18 @@ const Categories = () => {
     >
       {/* Category Cards here */}
     {/* <Text>Categories (Bitches!)</Text> */}
-    {categories.map((category) => {
+    {/* {categories.map((category) => {
       <CategoryCard 
         key={category._id}
         imgUrl={urlFor(category.image).width(200).url()}
         title={category.name} 
       />
-    })}
+    })} */}
     
-    {/* <CategoryCard imgUrl='https://links.papareact.com/gn7' title="Testing2" />
+    {/* <CategoryCard imgUrl='https://links.papareact.com/gn7' title="Testing2" />  */}
     <CategoryCard imgUrl='https://links.papareact.com/gn7' title="TestingC" />
     <CategoryCard imgUrl='https://links.papareact.com/gn7' title="TestingD" />
-    <CategoryCard imgUrl='https://links.papareact.com/gn7' title="TestingE" /> */}
+    <CategoryCard imgUrl='https://links.papareact.com/gn7' title="TestingE" />
     </ScrollView>
   )
 }
