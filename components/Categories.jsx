@@ -17,7 +17,7 @@ const Categories = () => {
     })
   }, []);
 
-  console.log(categories)
+  // console.log(categories)
  
   return (
     <ScrollView
@@ -30,7 +30,7 @@ const Categories = () => {
     >
       {/* Category Cards here */}
     {/* <Text>Categories (Bitches!)</Text> */}
-    {categories.map((category) => (
+    {categories?.map((category) => (
       <CategoryCard 
         key={category._id}
         imgUrl={urlFor(category.image).width(200).url()}
