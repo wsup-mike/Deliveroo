@@ -48,8 +48,24 @@ const FeaturedRow = ({ id, title, description  }) => {
     
   // }, []);
 
+  useEffect(() => {
+    client.fetch(`
+      *[_type == 'featured' && _id == $id]{
+        ...,
+        restaurants[]->{
+          ...,
+          dishes[]->,
+          type=> {
+            name
+          }
+        },
+      }[0]
+    `, { id: id }).then((data) => {
+      setRestaurants(data?.restaurants)    
+  })
+  }, []);
     
-  // console.log(restaurants)
+  console.log(restaurants)
   // useEffect(() => {
   //   console.log(`Here's the 'restaurants' state array logging from the useEffect: ${restaurants.name} `)
   // }, [restaurants]);
