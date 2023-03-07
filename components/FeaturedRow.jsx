@@ -6,7 +6,6 @@ import { client } from '../sanity';
 import "react-native-url-polyfill/auto";
 import querystring from "querystring";
 
-
 //4 featured category ids
 // 07be6f5c-e806-4b93-b1b1-b35bf7ebaaf4
 // 1816b133-f591-4169-b0d4-1c13b6cd8479
@@ -65,7 +64,7 @@ const FeaturedRow = ({ id, title, description  }) => {
   })
   }, []);
     
-  console.log(restaurants)
+  // console.log(restaurants)
   // useEffect(() => {
   //   console.log(`Here's the 'restaurants' state array logging from the useEffect: ${restaurants.name} `)
   // }, [restaurants]);
