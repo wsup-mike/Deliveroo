@@ -2,13 +2,13 @@ import { createClient } from "@sanity/client";
 // import { ImageUrlBuilder } from "@sanity/image-url";
 //connection to backend
 export const client = createClient({
-  projectId: "3oz477g8",
-  // projectId: "qwoxusny",
+  // projectId: "3oz477g8", // Mikes content lake
+  projectId: "qwoxusny", // Sonnys content lake
   dataset: "production",
   useCdn: true,
   // apiVersion: "2022-01-12",
   // apiVersion: "2023-03-04",
-  apiVersion: "2023-03-04",
+  apiVersion: "2021-10-21",
 });
 
 // 1:39 to resume
