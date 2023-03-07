@@ -62,7 +62,7 @@ const FeaturedRow = ({ id, title, description  }) => {
     `, { id: id }).then((data) => {
       setRestaurants(data?.restaurants)    
   })
-  }, []);
+  }, [id]);
     
   // console.log(restaurants)
   // useEffect(() => {
