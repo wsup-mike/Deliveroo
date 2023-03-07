@@ -1,10 +1,11 @@
 import { View, Text, ScrollView } from 'react-native'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import CategoryCard from './CategoryCard';
 import { client } from '../sanity';
 
 
 const Categories = () => {
+  const [categories, setCategories] = useState([]);
 
  
   return (
