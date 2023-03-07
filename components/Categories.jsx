@@ -7,6 +7,13 @@ import { client } from '../sanity';
 const Categories = () => {
   const [categories, setCategories] = useState([]);
 
+  useEffect(() => {
+    client.fetch(`
+      *[_type == 'category']
+    `).then(data => {
+      setCategories(data)
+    })
+  }, []);
  
   return (
     <ScrollView
