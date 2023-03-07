@@ -2,6 +2,7 @@ import { View, Text, ScrollView } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import CategoryCard from './CategoryCard';
 import { client } from '../sanity';
+import category from '../sanity/schemas/category';
 
 
 const Categories = () => {
@@ -26,11 +27,18 @@ const Categories = () => {
     >
       {/* Category Cards here */}
     {/* <Text>Categories (Bitches!)</Text> */}
-    <CategoryCard imgUrl='https://links.papareact.com/gn7' title="Testing1" />
-    <CategoryCard imgUrl='https://links.papareact.com/gn7' title="Testing2" />
+    {categories.map((category) => {
+      <CategoryCard 
+        key={category._id}
+        imgUrl={category.image}
+        title={category.name} 
+      />
+    })}
+    
+    {/* <CategoryCard imgUrl='https://links.papareact.com/gn7' title="Testing2" />
     <CategoryCard imgUrl='https://links.papareact.com/gn7' title="TestingC" />
     <CategoryCard imgUrl='https://links.papareact.com/gn7' title="TestingD" />
-    <CategoryCard imgUrl='https://links.papareact.com/gn7' title="TestingE" />
+    <CategoryCard imgUrl='https://links.papareact.com/gn7' title="TestingE" /> */}
     </ScrollView>
   )
 }
