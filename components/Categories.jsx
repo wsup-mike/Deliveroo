@@ -9,13 +9,26 @@ import { urlFor } from '../sanityUrl';
 const Categories = () => {
   const [categories, setCategories] = useState([]);
 
+  // useEffect(() => {
+  //   client.fetch(`
+  //     *[_type == 'category']
+  //   `).then(data => {
+  //     setCategories(data)
+  //   })
+  // }, []);
+
   useEffect(() => {
-    client.fetch(`
-      *[_type == 'category']
-    `).then(data => {
-      setCategories(data)
-    })
+    try {
+      client.fetch(`
+        *[_type == 'category']
+      `).then(data => {
+        setCategories(data)
+      })
+    } catch (error) {
+      console.error('Error fetching categories:', error)
+    }
   }, []);
+  
 
   // console.log(categories)
  
