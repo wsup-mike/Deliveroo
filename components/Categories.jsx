@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import CategoryCard from './CategoryCard';
 import { client } from '../sanity';
 import category from '../sanity/schemas/category';
+import { urlFor } from '../sanityUrl';
 
 
 const Categories = () => {
