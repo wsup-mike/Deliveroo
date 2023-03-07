@@ -4,8 +4,6 @@ import React, { useEffect } from 'react'
 
 const CategoryCard = ({ imgUrl, title }) => {
 
-  useEffect(() => {}, []);
-
   return (
     <TouchableOpacity className="mr-2 relative">
         <Image 
