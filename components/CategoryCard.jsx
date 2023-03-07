@@ -1,6 +1,5 @@
 import { View, Text, Image, TouchableOpacity } from 'react-native'
 import React, { useEffect } from 'react'
-import { urlFor } from '../sanityUrl';
 
 
 const CategoryCard = ({ imgUrl, title }) => {
