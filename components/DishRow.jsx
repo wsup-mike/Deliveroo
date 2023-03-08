@@ -14,17 +14,19 @@ const DishRow = ({
     <TouchableOpacity
         className="bg-white border p-4 border-gray-200 "
     >
-        <View>
-            <Text className="text-lg mb-1">{name}</Text>
-            <Text className="text-gray-400">{description}</Text>
-            <Text className="text-gray-400 mt-2"><Currency quantity={price} currency="USD" /></Text>
-        </View>
-        <View>
-            <Image 
-                source={{ uri: urlFor(image).url() }}
-                className="h-20 w-20 bg-gray-300 p-4"
-                style={{ borderWidth: 1, borderColor: '#f3f3f4' }}
-            />
+        <View className="flex-row">
+            <View>
+                <Text className="text-lg mb-1">{name}</Text>
+                <Text className="text-gray-400">{description}</Text>
+                <Text className="text-gray-400 mt-2"><Currency quantity={price} currency="USD" /></Text>
+            </View>
+            <View>
+                <Image 
+                    source={{ uri: urlFor(image).url() }}
+                    className="h-20 w-20 bg-gray-300 p-4"
+                    style={{ borderWidth: 1, borderColor: '#f3f3f4' }}
+                />
+            </View>
         </View>
     </TouchableOpacity>
   )
