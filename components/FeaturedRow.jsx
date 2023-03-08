@@ -95,7 +95,7 @@ const FeaturedRow = ({ id, title, description  }) => {
               imgUrl={restaurant.image}
               title={restaurant.name}
               rating={restaurant.rating}
-              genre={restaurant.type?.name}
+              genre={restaurant.name} // Cant get 'genre' to update (maybe 'category'?)
               address={restaurant.address}
               short_description={restaurant.short_description}
               dishes={restaurant.dishes}
