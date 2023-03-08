@@ -1,4 +1,4 @@
-import { View, Text } from 'react-native'
+import { View, Text, ScrollView } from 'react-native'
 import React, { useLayoutEffect } from 'react'
 import { useRoute } from '@react-navigation/core';
 import { useNavigation } from '@react-navigation/native';
@@ -27,9 +27,9 @@ const RestaurantScreen = () => {
   }, []);
 
   return (
-    <View>
+    <ScrollView>
       <Text>{title}</Text>
-    </View>
+    </ScrollView>
   )
 }
 
