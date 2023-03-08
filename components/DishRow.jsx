@@ -40,7 +40,7 @@ const DishRow = ({
             <View>
                 <TouchableOpacity>
                     <MinusCircleIcon 
-                        color={items.length > 0 ? "00CCBB" : "gray"}
+                        // color={items.length > 0 ? "00CCBB" : "gray"}
                         size={40}
                     />
                 </TouchableOpacity>
