@@ -2,6 +2,7 @@ import { View, Text, ScrollView, Image } from 'react-native'
 import React, { useLayoutEffect } from 'react'
 import { useRoute } from '@react-navigation/core';
 import { useNavigation } from '@react-navigation/native';
+import { urlFor } from '../sanityUrl';
 
 const RestaurantScreen = () => {
   const navigation = useNavigation();
@@ -30,7 +31,11 @@ const RestaurantScreen = () => {
     <ScrollView>
       <Text>{title}</Text>
       <View>
-     
+        <Image 
+          source={{
+            uri: urlFor(imgUrl).url(),
+          }}
+        />
       </View>
     </ScrollView>
   )
