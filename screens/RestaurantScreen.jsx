@@ -74,6 +74,7 @@ const RestaurantScreen = () => {
               opacity={0.6}
               size={20}
             />
+            <Text className="pl-2 flex-1 text-md font-bold">Have a food allergy?</Text>
           </TouchableOpacity>
       </View>
     </ScrollView>
