@@ -30,7 +30,7 @@ const RestaurantScreen = () => {
   return (
     <ScrollView>
       {/* <Text>{title}</Text> */}
-      <View>
+      <View className="relative">
         <Image 
           source={{
             uri: urlFor(imgUrl).url(),
