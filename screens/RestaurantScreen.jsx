@@ -66,7 +66,15 @@ const RestaurantScreen = () => {
                 <Text className="text-xs text-gray-500">Nearby · {address}</Text>
               </View>
             </View>
+            <Text className="text-gray-500 mt-2 pb-4">{short_description}</Text>
           </View>
+          <TouchableOpacity>
+            <QuestionMarkCircleIcon 
+              color="gray"
+              opacity={0.6}
+              size={20}
+            />
+          </TouchableOpacity>
       </View>
     </ScrollView>
   )
