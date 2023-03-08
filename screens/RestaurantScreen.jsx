@@ -46,7 +46,7 @@ const RestaurantScreen = () => {
         </TouchableOpacity>
       </View>
       <View className="bg-white">
-          <View>
+          <View className="px-4 pt-4">
             <Text>{title}</Text>
           </View>
       </View>
