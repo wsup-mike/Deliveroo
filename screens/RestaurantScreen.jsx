@@ -3,7 +3,19 @@ import React from 'react'
 import { useRoute } from '@react-navigation/core';
 
 const RestaurantScreen = () => {
-  const route = useRoute();
+  // const route = useRoute();
+  const { params: // instead to destructure all this from RestaurantCard instead of using route.params.___ 
+    id,
+    imgUrl,
+    title,
+    rating,
+    genre,
+    address,
+    short_description,
+    dishes,
+    long,
+    lat,
+  } = useRoute();
 
   return (
     <View>
