@@ -4,6 +4,12 @@ import { useRoute } from '@react-navigation/core';
 import { useNavigation } from '@react-navigation/native';
 import { urlFor } from '../sanityUrl';
 import { ArrowLeftIcon } from 'react-native-heroicons/solid';
+import {
+  ArrowLeftIcon,
+  ChevronRightIcon,
+  MapPinIcon,
+  StarIcon,
+} from 'react-native-heroicons/outline';
 
 const RestaurantScreen = () => {
   const navigation = useNavigation();
@@ -49,7 +55,7 @@ const RestaurantScreen = () => {
           <View className="px-4 pt-4">
             <Text className="text-3xl font-bold">{title}</Text>
             <View className="flex-row space-x-2 my-1">
-              
+
             </View>
           </View>
       </View>
