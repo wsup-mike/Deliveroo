@@ -57,7 +57,8 @@ const RestaurantScreen = () => {
             <View className="flex-row space-x-2 my-1">
               <View>
                 <StarIcon color="green" opacity={0.5} size={22} />
-                <Text className="text-green-500">{rating}<Text></Text>
+                <Text className="text-gray-500">
+                  <Text className="text-green-500">{rating}</Text> · {genre}
                 </Text>
               </View>
             </View>
