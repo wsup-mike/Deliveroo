@@ -1,5 +1,5 @@
 import { View, Text, TouchableOpacity, Image } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
 import Currency from 'react-currency-formatter'
 import { urlFor } from '../sanityUrl';
 
@@ -10,12 +10,16 @@ const DishRow = ({
     price,
     image,
 }) => {
+
+    const [isPressed, setIsPressed] = useState(false);
+
   return (
     <TouchableOpacity
         className="bg-white border p-4 border-gray-200 "
+        
     >
         <View className="flex-row">
-            <View>
+            <View className="flex-1 pr-2">
                 <Text className="text-lg mb-1">{name}</Text>
                 <Text className="text-gray-400">{description}</Text>
                 <Text className="text-gray-400 mt-2"><Currency quantity={price} currency="USD" /></Text>
