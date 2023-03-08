@@ -2,6 +2,7 @@ import { View, Text, TouchableOpacity, Image } from 'react-native'
 import React, { useState } from 'react'
 import Currency from 'react-currency-formatter'
 import { urlFor } from '../sanityUrl';
+import { MinusCircleIcon } from 'react-native-heroicons/solid';
 
 const DishRow = ({
     id,
@@ -34,6 +35,18 @@ const DishRow = ({
             </View>
         </View>
     </TouchableOpacity>
+    {isPressed && (
+        <View>
+            <View>
+                <TouchableOpacity>
+                    <MinusCircleIcon 
+                        color={items.length > 0 ? "00CCBB" : "gray"}
+                        size={40}
+                    />
+                </TouchableOpacity>
+            </View>
+        </View>
+    )}
     </>
   )
 }
