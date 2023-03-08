@@ -1,5 +1,5 @@
 import { View, Text } from 'react-native'
-import React from 'react'
+import React, { useLayoutEffect } from 'react'
 import { useRoute } from '@react-navigation/core';
 import { useNavigation } from '@react-navigation/native';
 
@@ -19,6 +19,12 @@ const RestaurantScreen = () => {
     lat,
   
   },} = useRoute();
+
+  useLayoutEffect(() => { // used to hide the navigation header before the screen is painted 
+    navigation.setOptions({
+      headerShown: false,
+    })
+  }, []);
 
   return (
     <View>
