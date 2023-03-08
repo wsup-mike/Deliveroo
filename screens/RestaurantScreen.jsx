@@ -20,7 +20,7 @@ const RestaurantScreen = () => {
 
   return (
     <View>
-      <Text>Restaurant Screen</Text>
+      <Text>{title}</Text>
     </View>
   )
 }
