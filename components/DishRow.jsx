@@ -2,7 +2,7 @@ import { View, Text, TouchableOpacity, Image } from 'react-native'
 import React, { useState } from 'react'
 import Currency from 'react-currency-formatter'
 import { urlFor } from '../sanityUrl';
-import { MinusCircleIcon } from 'react-native-heroicons/solid';
+import { MinusCircleIcon, PlusCircleIcon } from 'react-native-heroicons/solid';
 
 const DishRow = ({
     id,
