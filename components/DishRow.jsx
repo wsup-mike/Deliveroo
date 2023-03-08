@@ -1,5 +1,6 @@
 import { View, Text, TouchableOpacity } from 'react-native'
 import React from 'react'
+import Currency from 'react-currency-formatter'
 
 const DishRow = ({
     id,
