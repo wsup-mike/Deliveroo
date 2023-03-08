@@ -4,7 +4,7 @@ import { useRoute } from '@react-navigation/core';
 
 const RestaurantScreen = () => {
   // const route = useRoute();
-  const { params: // instead to destructure all this from RestaurantCard instead of using route.params.___ 
+  const { params: { // instead to destructure all this from RestaurantCard instead of using route.params.___ 
     id,
     imgUrl,
     title,
@@ -15,11 +15,12 @@ const RestaurantScreen = () => {
     dishes,
     long,
     lat,
-  } = useRoute();
+  
+  },} = useRoute();
 
   return (
     <View>
-      <Text>RestaurantScreen</Text>
+      <Text>Restaurant Screen</Text>
     </View>
   )
 }
