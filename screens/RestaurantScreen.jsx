@@ -68,7 +68,7 @@ const RestaurantScreen = () => {
             </View>
             <Text className="text-gray-500 mt-2 pb-4">{short_description}</Text>
           </View>
-          <TouchableOpacity>
+          <TouchableOpacity className="flex-row items-center space-x-2 p-4 border-y border-gray-300">
             <QuestionMarkCircleIcon 
               color="gray"
               opacity={0.6}
