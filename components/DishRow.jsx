@@ -11,7 +11,9 @@ const DishRow = ({
     image,
 }) => {
   return (
-    <TouchableOpacity>
+    <TouchableOpacity
+        className="bg-white border p-4 border-gray-200 "
+    >
         <View>
             <Text className="text-lg mb-1">{name}</Text>
             <Text className="text-gray-400">{description}</Text>
