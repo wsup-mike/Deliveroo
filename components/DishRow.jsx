@@ -11,7 +11,7 @@ const DishRow = ({
   return (
     <TouchableOpacity>
         <View>
-            <Text>{name}</Text>
+            <Text className="text-lg mb-1">{name}</Text>
             <Text>{description}</Text>
         </View>
     </TouchableOpacity>
