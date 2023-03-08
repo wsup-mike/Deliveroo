@@ -36,18 +36,20 @@ const DishRow = ({
         </View>
     </TouchableOpacity>
     {isPressed && (
-        <View>
-            <View className="flex-row">
+        <View className="bg-white px-4">
+            <View className="flex-row items-center space-x-2 pb-3"> 
                 <TouchableOpacity>
                     <MinusCircleIcon 
                         // color={items.length > 0 ? "00CCBB" : "gray"}
                         size={40}
+                        color="#00ccbb"
                     />
                 </TouchableOpacity>
                 <Text className="">0</Text>
                 <TouchableOpacity>
                     <PlusCircleIcon 
                         // color={items.length > 0 ? "00CCBB" : "gray"}
+                        color="#00ccbb"
                         size={40}
                     />
                 </TouchableOpacity>
