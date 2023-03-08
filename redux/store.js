@@ -3,6 +3,6 @@ import basketReducer from "../features/basketSlice";
 
 export const store = configureStore({
   reducer: {
-    basket: basketReducer,
+    basket: basketReducer, // adding this reducer connects new slice to overall global store
   },
 });
