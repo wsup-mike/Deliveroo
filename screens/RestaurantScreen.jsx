@@ -1,9 +1,8 @@
-import { View, Text, ScrollView, Image } from 'react-native'
+import { View, Text, ScrollView, Image, TouchableOpacity } from 'react-native'
 import React, { useLayoutEffect } from 'react'
 import { useRoute } from '@react-navigation/core';
 import { useNavigation } from '@react-navigation/native';
 import { urlFor } from '../sanityUrl';
-import { TouchableOpacity } from 'react-native-web';
 import { ArrowLeftIcon } from 'react-native-heroicons/solid';
 
 const RestaurantScreen = () => {
@@ -40,7 +39,7 @@ const RestaurantScreen = () => {
           className="w-full h-56 bg-gray-300 p-4"
         />
         <TouchableOpacity>
-          <ArrowLeftIcon size={20} color="#00ccbb" />
+          <ArrowLeftIcon size={20} color="#00CCBB" />
         </TouchableOpacity>
       </View>
     </ScrollView>
