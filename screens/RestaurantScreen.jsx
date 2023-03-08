@@ -4,7 +4,7 @@ import { useRoute } from '@react-navigation/core';
 import { useNavigation } from '@react-navigation/native';
 
 const RestaurantScreen = () => {
-  
+  const navigation = useNavigation();
   // const route = useRoute();
   const { params: { // instead to destructure all this from RestaurantCard instead of using route.params.___ 
     id,
