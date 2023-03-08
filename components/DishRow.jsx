@@ -10,7 +10,10 @@ const DishRow = ({
 }) => {
   return (
     <TouchableOpacity>
-      <Text>DishRow</Text>
+        <View>
+            <Text>{name}</Text>
+            <Text>{description}</Text>
+        </View>
     </TouchableOpacity>
   )
 }
