@@ -17,7 +17,7 @@ const DishRow = ({
   return (
     <>
     <TouchableOpacity
-        className="bg-white border p-4 border-gray-200 "
+        className={`bg-white border p-4 border-gray-200 ${isPressed && "border-b-0"}`}
         onPress={() => setIsPressed(!isPressed)}
     >
         <View className="flex-row">
