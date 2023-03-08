@@ -38,7 +38,7 @@ const RestaurantScreen = () => {
           }}
           className="w-full h-56 bg-gray-300 p-4"
         />
-        <TouchableOpacity>
+        <TouchableOpacity className="absolute top-10 left-5 p-2 bg-gray-50 rounded-full">
           <ArrowLeftIcon size={20} color="#00CCBB" />
         </TouchableOpacity>
       </View>
