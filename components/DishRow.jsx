@@ -21,6 +21,7 @@ const DishRow = ({
             <Image 
                 source={{ uri: urlFor(image).url() }}
                 className="h-20 w-20 bg-gray-300 p-4"
+                style={{ borderWidth: 1, borderColor: '#f3f3f4' }}
             />
         </View>
     </TouchableOpacity>
