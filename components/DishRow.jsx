@@ -14,6 +14,7 @@ const DishRow = ({
     const [isPressed, setIsPressed] = useState(false);
 
   return (
+    <>
     <TouchableOpacity
         className="bg-white border p-4 border-gray-200 "
         
@@ -33,6 +34,7 @@ const DishRow = ({
             </View>
         </View>
     </TouchableOpacity>
+    </>
   )
 }
 
