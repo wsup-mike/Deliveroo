@@ -9,7 +9,8 @@ import {
   ChevronRightIcon,
   MapPinIcon,
   StarIcon,
-} from 'react-native-heroicons/outline';
+} from 'react-native-heroicons/solid';
+import { QuestionMarkCircleIcon } from 'react-native-heroicons/outline';
 
 const RestaurantScreen = () => {
   const navigation = useNavigation();
