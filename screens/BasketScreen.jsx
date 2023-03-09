@@ -4,6 +4,7 @@ import { useNavigation } from '@react-navigation/native';
 import { useSelector } from 'react-redux';
 import { selectBasketItems, selectRestaurant } from '../features/restaurantSlice';
 import { useDispatch } from 'react-redux';
+import { XCircleIcon } from 'react-native-heroicons/solid';
 
 
 // here we want to capture all details of the 'restaurant' 
@@ -38,7 +39,7 @@ const BasketScreen = () => {
                 className="rounded-full bg-gray-100 absolute top-3 right-5"
                 onPress={navigation.goBack}
             >
-                
+                <XCircleIcon color="#00ccbb" height={50} width={50} />
             </TouchableOpacity>
         </View>
     </SafeAreaView>
