@@ -15,10 +15,12 @@ const BasketIcon = () => {
     
     return (
         <View className="absolute bottom-10 w-full z-50">
-            <TouchableOpacity>
+            <TouchableOpacity
+                className="bg-[#00bbcc] mx-5 p-4 rounded-lg flex-row items-center space-x-1"
+            >
                 <Text>{items.length}</Text>
                 <Text>View Basket</Text>
-                <Text><Currency quantity={basketTotal} currency="USD" /></Text>
+                <Text ><Currency quantity={basketTotal} currency="USD" /></Text>
             </TouchableOpacity>
         </View>
     )
