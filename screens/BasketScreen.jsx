@@ -28,7 +28,7 @@ const BasketScreen = () => {
 
     return (
     <SafeAreaView className="flex-1 bg-white">
-        <View>
+        <View className="flex-1 bg-gray-100">
             <View>
                 <View>
                     <Text className="text-lg font-bold text-center">Basket</Text>
