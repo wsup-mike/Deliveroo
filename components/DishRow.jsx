@@ -14,6 +14,7 @@ const DishRow = ({
 }) => {
 
     const [isPressed, setIsPressed] = useState(false);
+    const dispatch = useDispatch();
 
     return (
         <>
