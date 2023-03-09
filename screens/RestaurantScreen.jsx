@@ -1,5 +1,5 @@
 import { View, Text, ScrollView, Image, TouchableOpacity } from 'react-native'
-import React, { useLayoutEffect } from 'react'
+import React, { useEffect, useLayoutEffect } from 'react'
 import { useRoute } from '@react-navigation/core';
 import { useNavigation } from '@react-navigation/native';
 import { urlFor } from '../sanityUrl';
@@ -12,6 +12,7 @@ import {
 import { QuestionMarkCircleIcon } from 'react-native-heroicons/outline';
 import DishRow from '../components/DishRow';
 import BasketIcon from '../components/BasketIcon';
+import { useDispatch } from 'react-redux';
 
 const RestaurantScreen = () => {
   const navigation = useNavigation();
@@ -30,6 +31,8 @@ const RestaurantScreen = () => {
   
   },} = useRoute();
 
+
+  
   useLayoutEffect(() => { // used to hide the navigation header before the screen is painted 
     navigation.setOptions({
       headerShown: false,
