@@ -12,7 +12,15 @@ const BasketScreen = () => {
     const items = useSelector(selectBasketItems) // extracts all current items in basket
     const dispatch = useDispatch(); // unlock dispatch
     const [groupedItemsInBasket, setGroupedItemsInBasket] = useState([]);
-    
+
+    useMemo(() => { // if 'items' value not changed, we wont recompute the value anymore
+        const groupedItems = items.reduce(() => {
+            (results[item.id] = results[item.id] || []).push(item);
+            return results;
+        }, {});
+
+        setGroupedItemsInBasket(groupedItems)
+    }, [items]);
 
     return (
     <View>
