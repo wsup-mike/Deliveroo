@@ -18,6 +18,7 @@ export default function App() {
           {/* Screens here*/}
           <Stack.Screen name="Home" component={HomeScreen} />
           <Stack.Screen name="Restaurant" component={RestaurantScreen} />
+          <Stack.Screen name="Basket" component={BasketScreen} />
         </Stack.Navigator>
       </Provider>
     </NavigationContainer>
