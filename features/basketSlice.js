@@ -50,4 +50,5 @@ export const selectBasketItemsWithId = (state, id) =>
 // Then by the end of looping, the total will accumulate the item.price of all
 export const selectBasketTotal = (state) =>
   state.basket.items.reduce((total, item) => (total += item.price), 0);
+
 export default basketSlice.reducer;
