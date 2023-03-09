@@ -4,7 +4,7 @@ import Currency from 'react-currency-formatter'
 import { urlFor } from '../sanityUrl';
 import { MinusCircleIcon, PlusCircleIcon } from 'react-native-heroicons/solid';
 import { useDispatch, useSelector } from 'react-redux';
-import { addToBasket, selectBasketItems, selectBasketItemsWithId } from '../features/basketSlice';
+import { addToBasket, removeFromBasket, selectBasketItems, selectBasketItemsWithId } from '../features/basketSlice';
 
 const DishRow = ({
     id,
@@ -24,6 +24,11 @@ const DishRow = ({
     };
 
     // console.log(items)
+
+    const removeItemFromBasket = () => {
+        if (!items.length > 0) return;
+        dispatch(removeFromBasket({ id }))
+    };
 
     return (
         <>

@@ -15,6 +15,7 @@ export const basketSlice = createSlice({
       ];
     },
     removeFromBasket: (state, action) => {
+      //??? but he uses this a lot!
       const index = state.items.findIndex(
         (item) => item.id === action.payload.id
       );
@@ -26,6 +27,8 @@ export const basketSlice = createSlice({
           `Can't remove product (id: ${action.payload.id}) as it is not in basket!`
         );
       }
+
+      state.items = newBasket;
     },
   },
 });
