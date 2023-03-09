@@ -8,7 +8,7 @@ import { XCircleIcon } from 'react-native-heroicons/solid';
 import { urlFor } from '../sanityUrl';
 import Currency from 'react-currency-formatter';
 import { removeFromBasket } from '../features/basketSlice';
-import { selectBasketTotal } from "./features/basketSlice";
+import { selectBasketTotal } from '../features/basketSlice';
 
 
 // here we want to capture all details of the 'restaurant' 
@@ -82,7 +82,9 @@ const BasketScreen = () => {
             <View>
                 <View>
                     <Text>Subtotal</Text>
-                    <Text></Text>
+                    <Text>
+                        <Currency quantity={basketTotal} currency="USD" />
+                    </Text>
                 </View>
                 
             </View>
