@@ -22,12 +22,12 @@ const BasketScreen = () => {
         setGroupedItemsInBasket(groupedItems)
     }, [items]);
 
-    console.log(groupedItemsInBasket);
+    // console.log(groupedItemsInBasket);
 
     return (
-    <View>
+    <SafeAreaView>
       <Text>BasketScreen</Text>
-    </View>
+    </SafeAreaView>
   )
 }
 
