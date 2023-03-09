@@ -1,9 +1,8 @@
 import { View, Text, SafeAreaView } from 'react-native'
 import React from 'react'
 import * as Animatable from 'react-native-animatable'
-// import Video from 'react-native-video'
-// import { Constants } from 'expo-av';
-// import { Platform } from 'react-native';
+import * as Progress from 'react-native-progress'
+
 
 
 const PreparingOrderScreen = () => {
