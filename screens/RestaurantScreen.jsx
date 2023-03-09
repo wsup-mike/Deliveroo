@@ -47,7 +47,7 @@ const RestaurantScreen = () => {
       long,
       lat,
     }))
-  })
+  }, [dispatch])
   
   useLayoutEffect(() => { // used to hide the navigation header before the screen is painted 
     navigation.setOptions({
