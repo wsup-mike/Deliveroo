@@ -16,7 +16,11 @@ const initialState = {
 export const restaurantSlice = createSlice({
   name: "restaurant",
   initialState,
-  reducers: {},
+  reducers: {
+    setRestaurant: (state, action) => {
+      state.restaurant = action.payload;
+    },
+  },
 });
 
 // Action creators are generated for each case reducer function
