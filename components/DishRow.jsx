@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import Currency from 'react-currency-formatter'
 import { urlFor } from '../sanityUrl';
 import { MinusCircleIcon, PlusCircleIcon } from 'react-native-heroicons/solid';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addToBasket } from '../features/basketSlice';
 
 const DishRow = ({
