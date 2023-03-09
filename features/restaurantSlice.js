@@ -29,16 +29,7 @@ export const { setRestaurant } = restaurantSlice.actions;
 // add new selector function
 export const selectBasketItems = (state) => state.basket.items;
 
-// add new selector based on id. To filter match with given id
-export const selectBasketItemsWithId = (state, id) =>
-  state.basket.items.filter((item) => item.id === id);
-
-//sdd new selector that will tally up sum of items in basket into a single value by reducing to a number
-// go thru basket with each item, then reduce this array to 1 number
-// Pass into reduce: callback, initial value 0
-// total is an accumulator, item is each individual item
-// Then by the end of looping, the total will accrumulate the item.price of all
-export const selectBasketTotal = (state) =>
-  state.basket.items.reduce((total, item) => (total += item.price), 0);
+// new selector that will extract only the 'restaurant name'
+export const selectRestaurant = (state) => state.restaurant.restaurant;
 
 export default restaurantSlice.reducer;
