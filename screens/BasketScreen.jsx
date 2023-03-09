@@ -4,7 +4,8 @@ import { useNavigation } from '@react-navigation/native';
 
 
 const BasketScreen = () => {
-  return (
+    const navigation = useNavigation();
+    return (
     <View>
       <Text>BasketScreen</Text>
     </View>
