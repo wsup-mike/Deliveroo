@@ -17,6 +17,8 @@ import { useDispatch } from 'react-redux';
 const RestaurantScreen = () => {
   const navigation = useNavigation();
   // const route = useRoute();
+  const dispatch = useDispatch();
+
   const { params: { // instead to destructure all this from RestaurantCard instead of using route.params.___ 
     id,
     imgUrl,
