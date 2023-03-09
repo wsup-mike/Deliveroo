@@ -6,6 +6,7 @@ import { selectBasketItems, selectRestaurant } from '../features/restaurantSlice
 import { useDispatch } from 'react-redux';
 import { XCircleIcon } from 'react-native-heroicons/solid';
 import { urlFor } from '../sanityUrl';
+import Currency from 'react-currency-formatter';
 
 
 // here we want to capture all details of the 'restaurant' 
@@ -63,6 +64,9 @@ const BasketScreen = () => {
                             className="h-12 w-12 rounded-full"
                         />
                         <Text className="flex-1">{items[0]?.name}</Text>
+                        <Text>
+                            <Currency quantity={items[0]?.price} currency="USD" />
+                        </Text>
                     </View>
                 ))}
             </ScrollView>
