@@ -13,8 +13,8 @@ const initialState = {
   },
 };
 
-export const basketSlice = createSlice({
-  name: "basket",
+export const restaurantSlice = createSlice({
+  name: "restaurant",
   initialState,
   reducers: {
     addToBasket: (state, action) => {
@@ -43,7 +43,7 @@ export const basketSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { addToBasket, removeFromBasket } = basketSlice.actions;
+export const { addToBasket, removeFromBasket } = restaurantSlice.actions;
 
 // add new selector function
 export const selectBasketItems = (state) => state.basket.items;
@@ -60,4 +60,4 @@ export const selectBasketItemsWithId = (state, id) =>
 export const selectBasketTotal = (state) =>
   state.basket.items.reduce((total, item) => (total += item.price), 0);
 
-export default basketSlice.reducer;
+export default restaurantSlice.reducer;
