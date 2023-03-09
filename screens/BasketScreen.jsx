@@ -27,12 +27,12 @@ const BasketScreen = () => {
     // console.log(groupedItemsInBasket);
 
     return (
-    <SafeAreaView className="flex-1 bg-white">
-        <View className="flex-1 bg-gray-100">
-            <View>
+    <SafeAreaView className="flex-1 bg-white"> 
+        <View className="flex-1 bg-gray-100"> 
+            <View className="p-5 border-b border-[#00ccbb]">
                 <View>
                     <Text className="text-lg font-bold text-center">Basket</Text>
-                    <Text className="text-center text-gray-400 ">{restaurant.title}</Text>
+                    <Text className="text-center text-gray-400">{restaurant.title}</Text>
                 </View>
             </View>
             <TouchableOpacity 
