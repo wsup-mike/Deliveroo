@@ -58,6 +58,11 @@ const BasketScreen = () => {
                 {Object.entries(groupedItemsInBasket).map(([key, items]) => (
                     <View key={key}>
                         <Text>{items.length} x</Text>
+                        <Image 
+                            source={{ uri: urlFor(items[0]?.image).url() }}
+                            className="h-12 w-12 rounded-full"
+                        />
+                        <Text className="flex-1">{items[0]?.name}</Text>
                     </View>
                 ))}
             </ScrollView>
