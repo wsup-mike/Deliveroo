@@ -8,6 +8,7 @@ import { XCircleIcon } from 'react-native-heroicons/solid';
 import { urlFor } from '../sanityUrl';
 import Currency from 'react-currency-formatter';
 import { removeFromBasket } from '../features/basketSlice';
+import { selectBasketTotal } from "./features/basketSlice";
 
 
 // here we want to capture all details of the 'restaurant' 
@@ -17,6 +18,7 @@ const BasketScreen = () => {
     const items = useSelector(selectBasketItems) // extracts all current items in basket
     const dispatch = useDispatch(); // unlock dispatch
     const [groupedItemsInBasket, setGroupedItemsInBasket] = useState([]);
+    
 
     useMemo(() => { // if 'items' value not changed, we wont recompute the value anymore
         const groupedItems = items.reduce((results, item) => {
@@ -80,7 +82,9 @@ const BasketScreen = () => {
             <View>
                 <View>
                     <Text>Subtotal</Text>
+                    <Text></Text>
                 </View>
+                
             </View>
         </View>
     </SafeAreaView>
