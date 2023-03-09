@@ -92,6 +92,12 @@ const BasketScreen = () => {
                         <Currency quantity={5.99} currency="USD" />
                     </Text>
                 </View>
+                <View className="flex-row justify-between">
+                    <Text>Order total</Text>
+                    <Text className="font-extrabold">
+                        <Currency quantity={basketTotal + 5.99} currency="USD" />
+                    </Text>
+                </View>
             </View>
         </View>
     </SafeAreaView>
