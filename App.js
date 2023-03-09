@@ -30,6 +30,9 @@ export default function App() {
           <Stack.Screen
             name="PreparingOrder"
             component={PreparingOrderScreen}
+            options={{
+              presentation: "fullScreenModal",
+            }}
           />
         </Stack.Navigator>
       </Provider>
