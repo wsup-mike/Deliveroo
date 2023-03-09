@@ -55,7 +55,7 @@ const DishRow = ({
                                 color="#00ccbb"
                             />
                         </TouchableOpacity>
-                        <Text className="">0</Text>
+                        <Text className="">{items.length}</Text>
                         <TouchableOpacity onPress={addItemToBasket} >
                             <PlusCircleIcon 
                                 // color={items.length > 0 ? "00CCBB" : "gray"}
