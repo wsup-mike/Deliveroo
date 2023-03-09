@@ -55,7 +55,11 @@ const BasketScreen = () => {
                 </TouchableOpacity>
             </View>
             <ScrollView>
-                
+                {Object.entries(groupedItemsInBasket).map(([key, items]) => (
+                    <View key={key}>
+                        <Text>{items.length} x</Text>
+                    </View>
+                ))}
             </ScrollView>
         </View>
     </SafeAreaView>
