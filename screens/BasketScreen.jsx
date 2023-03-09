@@ -7,6 +7,7 @@ import { useDispatch } from 'react-redux';
 import { XCircleIcon } from 'react-native-heroicons/solid';
 import { urlFor } from '../sanityUrl';
 import Currency from 'react-currency-formatter';
+import { removeFromBasket } from '../features/basketSlice';
 
 
 // here we want to capture all details of the 'restaurant' 
@@ -67,6 +68,12 @@ const BasketScreen = () => {
                         <Text>
                             <Currency quantity={items[0]?.price} currency="USD" />
                         </Text>
+                        <TouchableOpacity
+                            
+                            onPress={() => dispatch(removeFromBasket({ id: key}))}
+                        >
+                            <Text className="text-[#00ccbb] text-xs">Remove</Text>
+                        </TouchableOpacity>
                     </View>
                 ))}
             </ScrollView>
