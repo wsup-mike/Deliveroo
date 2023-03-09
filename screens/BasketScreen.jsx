@@ -10,6 +10,7 @@ const BasketScreen = () => {
     const navigation = useNavigation();
     const restaurant = useSelector(selectRestaurant) // extracts restaurant name
     const items = useSelector(selectBasketItems) // extracts all current items in basket
+    const dispatch = useDispatch(); // unlock dispatch
     
 
     return (
