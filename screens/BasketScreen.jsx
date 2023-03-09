@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux';
 import { selectBasketItems, selectRestaurant } from '../features/restaurantSlice';
 import { useDispatch } from 'react-redux';
 import { XCircleIcon } from 'react-native-heroicons/solid';
+import { urlFor } from '../sanityUrl';
 
 
 // here we want to capture all details of the 'restaurant' 
@@ -41,11 +42,16 @@ const BasketScreen = () => {
             >
                 <XCircleIcon color="#00ccbb" height={50} width={50} />
             </TouchableOpacity>
-        </View>
-        <View>
+            <View>
             <Image 
-                sour
+                source={{
+                    uri: "https://links.papareact.com/wru"
+                }}
+                className="w-7 h-7 bg-gray-300 p-4 rounded-full"
             />
+            <Text className="flex-1">Deliver in 50-75 min</Text>
+            
+            </View>
         </View>
     </SafeAreaView>
   )
