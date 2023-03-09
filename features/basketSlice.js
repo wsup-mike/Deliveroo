@@ -26,7 +26,7 @@ export const { addToBasket, removeFromBasket } = basketSlice.actions;
 // add new selector function
 export const selectBasketItems = (state) => state.basket.items;
 
-// add new selector based on id
+// add new selector based on id. To filter match with given id
 export const selectBasketItemsWithId = (state, id) =>
   state.basket.items.filter((item) => item.id === id);
 

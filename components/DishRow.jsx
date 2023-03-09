@@ -15,7 +15,8 @@ const DishRow = ({
 }) => {
 
     const [isPressed, setIsPressed] = useState(false);
-    const items = useSelector(selectBasketItemsWithId);
+    // So each dish buttons pertain only to that dish of id passed in
+    const items = useSelector((state) => selectBasketItemsWithId(state, id));
     const dispatch = useDispatch();
 
     const addItemToBasket = () => {
