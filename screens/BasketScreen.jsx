@@ -1,9 +1,10 @@
-import { View, Text, SafeAreaView } from 'react-native';
+import { View, Text, SafeAreaView, TouchableOpacity } from 'react-native';
 import React, { useMemo, useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { useSelector } from 'react-redux';
 import { selectBasketItems, selectRestaurant } from '../features/restaurantSlice';
 import { useDispatch } from 'react-redux';
+
 
 // here we want to capture all details of the 'restaurant' 
 const BasketScreen = () => {
@@ -33,6 +34,12 @@ const BasketScreen = () => {
                     <Text className="text-center text-gray-400 ">{restaurant.title}</Text>
                 </View>
             </View>
+            <TouchableOpacity 
+                className="rounded-full bg-gray-100 absolute top-3 right-5"
+                onPress={navigation.goBack}
+            >
+                
+            </TouchableOpacity>
         </View>
     </SafeAreaView>
   )
