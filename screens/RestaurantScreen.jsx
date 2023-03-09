@@ -81,7 +81,7 @@ const RestaurantScreen = () => {
               <Text className="pl-2 flex-1 text-md font-bold">Have a food allergy?</Text>
               <ChevronRightIcon color="#00ccbb"/>
             </TouchableOpacity>
-            <View>
+            <View className="pb-36">
               <Text className="px-4 pt-4 mb-3 font-bold text-xl">Menu</Text>
               {/* Dish rows here. To map over a restaurant's 'dishes[]' array to populate this area's content  */}
               {dishes.map((dish) => (
