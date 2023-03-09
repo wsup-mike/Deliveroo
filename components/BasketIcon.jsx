@@ -11,7 +11,7 @@ const BasketIcon = () => {
     const navigation = useNavigation();
     const basketTotal = useSelector(selectBasketTotal) // generates single value total for entire basket
     return (
-        <View>
+        <View className="absolute bottom-10 w-full z-50 ">
             <Text>BasketIcon</Text> 
         </View>
     )
