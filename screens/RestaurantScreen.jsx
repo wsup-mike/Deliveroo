@@ -11,6 +11,7 @@ import {
 } from 'react-native-heroicons/solid';
 import { QuestionMarkCircleIcon } from 'react-native-heroicons/outline';
 import DishRow from '../components/DishRow';
+import BasketIcon from '../components/BasketIcon';
 
 const RestaurantScreen = () => {
   const navigation = useNavigation();
@@ -37,6 +38,7 @@ const RestaurantScreen = () => {
 
   return (
     <>
+    <BasketIcon />
       <ScrollView>
         {/* <Text>{title}</Text> */}
         <View className="relative">
