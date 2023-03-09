@@ -8,6 +8,7 @@ import { useNavigation } from '@react-navigation/native';
 // Requires access to our basket!
 const BasketIcon = () => {
     const items = useSelector(selectBasketItems);
+    const navigation = useNavigation();
     return (
         <View>
             <Text>BasketIcon</Text> 
