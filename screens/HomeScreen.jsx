@@ -107,7 +107,7 @@ const HomeScreen = () => {
       </View>
 
       {/* Body */}
-      <ScrollView className="bg-gray-100">
+      <ScrollView contentContainerStyle={{ paddingBottom: 150}} className="bg-gray-100">
         {/* Categories */}
         <Categories />
         {/* Featured Rows */}
