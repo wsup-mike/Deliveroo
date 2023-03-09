@@ -14,7 +14,7 @@ const BasketScreen = () => {
     const [groupedItemsInBasket, setGroupedItemsInBasket] = useState([]);
 
     useMemo(() => { // if 'items' value not changed, we wont recompute the value anymore
-        const groupedItems = items.reduce(() => {
+        const groupedItems = items.reduce((results, item) => {
             (results[item.id] = results[item.id] || []).push(item);
             return results;
         }, {});
