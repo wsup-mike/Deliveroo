@@ -81,8 +81,8 @@ const BasketScreen = () => {
             </ScrollView>
             <View>
                 <View>
-                    <Text>Subtotal</Text>
-                    <Text>
+                    <Text className="text-gray-400">Subtotal</Text>
+                    <Text className="text-gray-400">
                         <Currency quantity={basketTotal} currency="USD" />
                     </Text>
                 </View>
