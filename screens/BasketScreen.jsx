@@ -77,6 +77,11 @@ const BasketScreen = () => {
                     </View>
                 ))}
             </ScrollView>
+            <View>
+                <View>
+                    <Text>Subtotal</Text>
+                </View>
+            </View>
         </View>
     </SafeAreaView>
   )
