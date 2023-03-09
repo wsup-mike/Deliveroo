@@ -17,6 +17,10 @@ const DishRow = ({
     const [isPressed, setIsPressed] = useState(false);
     const dispatch = useDispatch();
 
+    const addItemToBasket = () => {
+        dispatch(addToBasket({ id, name, description, price, image }));
+    };
+
     return (
         <>
             <TouchableOpacity
