@@ -27,6 +27,10 @@ export default function App() {
               headerShown: false,
             }}
           />
+          <Stack.Screen
+            name="PreparingOrder"
+            component={PreparingOrderScreen}
+          />
         </Stack.Navigator>
       </Provider>
     </NavigationContainer>
