@@ -56,7 +56,7 @@ const BasketScreen = () => {
                     <Text className="text-[#00ccbb]">Change</Text>
                 </TouchableOpacity>
             </View>
-            <ScrollView>
+            <ScrollView className="divide-y divide-gray-200">
                 {Object.entries(groupedItemsInBasket).map(([key, items]) => (
                     <View key={key} className="flex-row items-center space-x-3 px-5 py-3 bg-white">
                         <Text>{items.length} x</Text>
