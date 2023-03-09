@@ -79,7 +79,7 @@ const BasketScreen = () => {
                     </View>
                 ))}
             </ScrollView>
-            <View>
+            <View className="p-5 bg-white mt-5 space-y-4 ">
                 <View className="flex-row justify-between">
                     <Text className="text-gray-400">Subtotal</Text>
                     <Text className="text-gray-400">
