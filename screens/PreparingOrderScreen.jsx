@@ -16,7 +16,11 @@ const PreparingOrderScreen = () => {
         className='h-60 w-60'
       />
       
-      
+      <Animatable.Text 
+        animation="slideInUp"
+        iterationCount={1}
+        className="text-lg my-10 text-white font-bold text-center"
+      >Waiting for restaurant to accept your order...</Animatable.Text>
     </SafeAreaView>
   )
 }
