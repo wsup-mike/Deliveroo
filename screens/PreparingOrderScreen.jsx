@@ -1,5 +1,6 @@
 import { View, Text, SafeAreaView } from 'react-native'
 import React from 'react'
+import * as Animatable from 'react-native-animatable'
 
 const PreparingOrderScreen = () => {
   return (
