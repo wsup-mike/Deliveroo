@@ -99,7 +99,7 @@ const BasketScreen = () => {
                     </Text>
                 </View>
                 <TouchableOpacity className="rounded-lg bg-[#00ccbb] p-4">
-                    <Text>Place Order</Text>
+                    <Text className="text-center text-white text-xl font-bold">Place Order</Text>
                 </TouchableOpacity>
             </View>
         </View>
