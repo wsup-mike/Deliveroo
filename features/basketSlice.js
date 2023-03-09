@@ -47,7 +47,7 @@ export const selectBasketItemsWithId = (state, id) =>
 // go thru basket with each item, then reduce this array to 1 number
 // Pass into reduce: callback, initial value 0
 // total is an accumulator, item is each individual item
-// Then by the end of looping, the total will accumulate the item.price of all
+// Then by the end of looping, the total will accrumulate the item.price of all
 export const selectBasketTotal = (state) =>
   state.basket.items.reduce((total, item) => (total += item.price), 0);
 
