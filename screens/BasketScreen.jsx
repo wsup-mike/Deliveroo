@@ -22,6 +22,8 @@ const BasketScreen = () => {
         setGroupedItemsInBasket(groupedItems)
     }, [items]);
 
+    console.log(groupedItemsInBasket);
+
     return (
     <View>
       <Text>BasketScreen</Text>
