@@ -13,6 +13,7 @@ import { QuestionMarkCircleIcon } from 'react-native-heroicons/outline';
 import DishRow from '../components/DishRow';
 import BasketIcon from '../components/BasketIcon';
 import { useDispatch } from 'react-redux';
+import { setRestaurant } from '../features/restaurantSlice';
 
 const RestaurantScreen = () => {
   const navigation = useNavigation();
@@ -33,7 +34,20 @@ const RestaurantScreen = () => {
   
   },} = useRoute();
 
-
+  useEffect(() => { // to capture all restaurant details in global store when this screen mounts
+    dispatch(setRestaurant({
+      id,
+      imgUrl,
+      title,
+      rating,
+      genre,
+      address,
+      short_description,
+      dishes,
+      long,
+      lat,
+    }))
+  })
   
   useLayoutEffect(() => { // used to hide the navigation header before the screen is painted 
     navigation.setOptions({
