@@ -60,6 +60,7 @@ const DishRow = ({
                                 // color={items.length > 0 ? "00CCBB" : "gray"}
                                 color="#00ccbb"
                                 size={40}
+                                onPress={addItemToBasket}
                             />
                         </TouchableOpacity>
                     </View>
