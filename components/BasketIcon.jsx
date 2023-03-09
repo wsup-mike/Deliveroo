@@ -3,6 +3,7 @@ import React from 'react'
 import { useSelector } from 'react-redux';
 import { selectBasketItems, selectBasketTotal } from '../features/basketSlice';
 import { useNavigation } from '@react-navigation/native';
+import Currency from 'react-currency-formatter';
 
 
 
@@ -16,6 +17,8 @@ const BasketIcon = () => {
         <View className="absolute bottom-10 w-full z-50">
             <TouchableOpacity>
                 <Text>{items.length}</Text>
+                <Text>View Basket</Text>
+                <Text><Currency /></Text>
             </TouchableOpacity>
         </View>
     )
