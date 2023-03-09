@@ -13,6 +13,8 @@ const BasketIcon = () => {
     const items = useSelector(selectBasketItems);
     const navigation = useNavigation();
     const basketTotal = useSelector(selectBasketTotal) // generates single value total for entire basket
+
+    if (items.length === 0) return null; // prevent basket from appearing if nothing yet placed
     
     return (
         <View className="absolute bottom-10 w-full z-50">
