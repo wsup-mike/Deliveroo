@@ -4,6 +4,7 @@ import { useNavigation } from '@react-navigation/native'
 import { useSelector } from 'react-redux'
 import { selectRestaurant } from '../features/restaurantSlice';
 import { XMarkIcon } from 'react-native-heroicons/solid';
+import { Progress } from 'react-native-progress'
 
 
 const DeliveryScreen = () => {
@@ -33,6 +34,8 @@ const DeliveryScreen = () => {
                             className="h-20 w-20"
                         />
                     </View>
+
+                    
                   
                 </View>
             </SafeAreaView>
