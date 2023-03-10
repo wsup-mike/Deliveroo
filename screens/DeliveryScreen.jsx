@@ -19,6 +19,13 @@ const DeliveryScreen = () => {
                     </TouchableOpacity>
                     <Text className="font-light text-white text-lg">Order Help</Text>
                 </View>
+
+                <View>
+                    <View>
+                        <Text className="text-lg text-gray-400">Estimated Arrival</Text>
+                        <Text className="text-4xl font-bold">45-55 minutes</Text>
+                    </View>
+                </View>
             </SafeAreaView>
         </View>
 
