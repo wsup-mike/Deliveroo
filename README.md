@@ -21,4 +21,5 @@ React Navigation
 
 
 
-Coding Tutorial by: https://www.youtube.com/@SonnySangha
+Coding Tutorial credit to [Sonny Sangha](https://www.youtube.com/@SonnySangha).
+This site was built using [GitHub Pages](https://pages.github.com/).
