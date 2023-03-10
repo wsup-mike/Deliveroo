@@ -65,6 +65,10 @@ const DeliveryScreen = () => {
                     pinColor='#00ccbb'
                 />
             </MapView>
+
+            <SafeAreaView>
+                
+            </SafeAreaView>
         </View>
 
     )
