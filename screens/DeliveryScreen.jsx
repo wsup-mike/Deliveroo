@@ -71,6 +71,7 @@ const DeliveryScreen = () => {
                     source={{
                         uri: 'https://links.papareact.com/wru',
                     }}
+                    className="w-12 h-12 bg-gray-300 p-4 rounded-full ml-5"
                 />
             </SafeAreaView>
         </View>
