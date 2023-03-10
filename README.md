@@ -12,12 +12,12 @@ A food delivery clone app built for iOS, Android and Web
 
 
 App powered by:
-*React Native
-*JavaScript
-*TailwindCSS
-*Sanity.io backend
-*Redux Toolkit
-*React Navigation
+* React Native
+* JavaScript
+* TailwindCSS
+* Sanity.io backend
+* Redux Toolkit
+* React Navigation
 
 
 
