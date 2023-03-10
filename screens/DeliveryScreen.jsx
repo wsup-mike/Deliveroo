@@ -43,6 +43,18 @@ const DeliveryScreen = () => {
                     </Text>
                 </View>
             </SafeAreaView>
+
+            <MapView
+                initialRegion={{
+                    latitude: restaurant.lat,
+                    longitude: restaurant.long,
+                    latitudeDelta: 0.005, // the 'zoom' scale
+                    longitudeDelta: 0.005,  // the 'zoom' scale
+                }}
+                className="flex-1 -mt-10 z-0"
+                mapType="terrain"
+            >
+            </MapView>
         </View>
 
     )
