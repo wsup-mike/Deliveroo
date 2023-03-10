@@ -15,7 +15,7 @@ const DeliveryScreen = () => {
             <SafeAreaView>
                 <View>
                     <TouchableOpacity>
-                        <XMarkIcon />
+                        <XMarkIcon color="white" size={30} />
                     </TouchableOpacity>
                     <Text>Order Help</Text>
                 </View>
