@@ -67,7 +67,11 @@ const DeliveryScreen = () => {
             </MapView>
 
             <SafeAreaView>
-                
+                <Image 
+                    source={{
+                        uri: 'https://links.papareact.com/wru',
+                    }}
+                />
             </SafeAreaView>
         </View>
 
