@@ -75,7 +75,7 @@ const DeliveryScreen = () => {
                 />
                 <View>
                     <Text className="text-lg">Steve Nash</Text>
-                    <Text>Your driver</Text>
+                    <Text className="text-gray-400">Your driver</Text>
                 </View>
             </SafeAreaView>
         </View>
