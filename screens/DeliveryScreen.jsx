@@ -1,6 +1,6 @@
-import { View, Text } from 'react-native'
+import { View, Text, SafeAreaView } from 'react-native'
 import React from 'react'
-import useNavigation from '@react-navigation/native'
+import { useNavigation } from '@react-navigation/native'
 import { useSelector } from 'react-redux'
 import { selectRestaurant } from '../features/restaurantSlice';
 
@@ -9,9 +9,14 @@ const DeliveryScreen = () => {
     const restaurant = useSelector(selectRestaurant);
 
     return (
-        <View className="bg-[#00ccbb]">
-        <Text>DeliveryScreen</Text>
+        <View className="bg-[#00ccbb] flex-1">
+            <SafeAreaView>
+                <View>
+                    <Text>Order Help</Text>
+                </View>
+            </SafeAreaView>
         </View>
+
     )
 }
 
