@@ -77,7 +77,7 @@ const DeliveryScreen = () => {
                     <Text className="text-lg">Steve Nash</Text>
                     <Text className="text-gray-400">Your driver</Text>
                 </View>
-                <Text>Call</Text>
+                <Text className='text-[#00ccbb] text-lg mr-5 font-bold'>Call</Text>
             </SafeAreaView>
         </View>
 
