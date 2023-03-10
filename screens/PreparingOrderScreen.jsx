@@ -8,6 +8,13 @@ import { useNavigation } from '@react-navigation/native';
 
 const PreparingOrderScreen = () => {
     const navigation = useNavigation();
+
+    useEffect(() => {
+        setTimeout(() => {
+            navigation.navigate("Basket")
+        }, 4000)
+    }, []);
+
     return (
         <SafeAreaView className="bg-[#00ccbb] flex-1 justify-center items-center">
         <Animatable.Image 
