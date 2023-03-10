@@ -21,7 +21,7 @@ const DeliveryScreen = () => {
                 </View>
 
                 <View className="bg-white mx-5 my-2 rounded-md p-6 z-50 shadow-md">
-                    <View>
+                    <View className="flex-row justify-between">
                         <View>
                             <Text className="text-lg text-gray-400">Estimated Arrival</Text>
                             <Text className="text-4xl font-bold">45-55 minutes</Text>
