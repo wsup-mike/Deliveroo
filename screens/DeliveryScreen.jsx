@@ -73,6 +73,10 @@ const DeliveryScreen = () => {
                     }}
                     className="w-12 h-12 bg-gray-300 p-4 rounded-full ml-5"
                 />
+                <View>
+                    <Text className="text-lg">Steve Nash</Text>
+                    <Text>Your driver</Text>
+                </View>
             </SafeAreaView>
         </View>
 
