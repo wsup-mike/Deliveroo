@@ -7,9 +7,9 @@ import { selectRestaurant } from '../features/restaurantSlice';
 const DeliveryScreen = () => {
     const navigation = useNavigation(); // to include 'back' button
     const restaurant = useSelector(selectRestaurant);
-    
+
     return (
-        <View>
+        <View className="bg-[#00ccbb]">
         <Text>DeliveryScreen</Text>
         </View>
     )
