@@ -1,4 +1,4 @@
-# Deliveroo App (Clone App)
+# Deliveroo Mobile App (Food Delivery Clone Application)
 
 A food delivery clone app built for iOS, Android and Web
 ![image](https://user-images.githubusercontent.com/40747156/224354111-3270f533-5686-4ce6-8af7-0c06121bfb66.png)
