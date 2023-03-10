@@ -17,7 +17,7 @@ const DeliveryScreen = () => {
                     <TouchableOpacity onPress={() => navigation.navigate('Home')}>
                         <XMarkIcon color="white" size={30} />
                     </TouchableOpacity>
-                    <Text>Order Help</Text>
+                    <Text className="font-light text-white text-lg">Order Help</Text>
                 </View>
             </SafeAreaView>
         </View>
