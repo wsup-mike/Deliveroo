@@ -14,7 +14,9 @@ const DeliveryScreen = () => {
         <View className="bg-[#00ccbb] flex-1">
             <SafeAreaView>
                 <View>
-                 
+                    <TouchableOpacity>
+                        <XMarkIcon />
+                    </TouchableOpacity>
                     <Text>Order Help</Text>
                 </View>
             </SafeAreaView>
