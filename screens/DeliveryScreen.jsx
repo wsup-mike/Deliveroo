@@ -27,7 +27,7 @@ const DeliveryScreen = () => {
                     </View>
                     <Image 
                         source={{
-                            uri: 'https://links.papafam.com/fls'
+                            uri: 'https://links.papareact.com/fls'
                         }}
                         className="h-20 w-20"
                     />
