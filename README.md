@@ -11,7 +11,7 @@ A food delivery clone app built for iOS, Android and Web
 
 
 
-App powered by:
+## App powered by:
 * React Native
 * JavaScript
 * TailwindCSS
@@ -22,4 +22,4 @@ App powered by:
 
 
 Coding Tutorial credit to [Sonny Sangha](https://www.youtube.com/@SonnySangha).
-This site was built using [GitHub Pages](https://pages.github.com/).
+
