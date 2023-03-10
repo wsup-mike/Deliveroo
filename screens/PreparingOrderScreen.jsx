@@ -19,7 +19,10 @@ const PreparingOrderScreen = () => {
         animation="slideInUp"
         iterationCount={1}
         className="text-lg my-10 text-white font-bold text-center"
-      >Waiting for restaurant to accept your order...</Animatable.Text>
+      >
+        Waiting for restaurant to accept your order...
+    </Animatable.Text>
+    <Progress.Circle size={60} indeterminate={true} color="white" />
     </SafeAreaView>
   )
 }
