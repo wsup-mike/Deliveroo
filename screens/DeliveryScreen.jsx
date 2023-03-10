@@ -12,7 +12,7 @@ const DeliveryScreen = () => {
 
     return (
         <View className="bg-[#00ccbb] flex-1">
-            <SafeAreaView>
+            <SafeAreaView className="z-50">
                 <View>
                     <TouchableOpacity onPress={() => navigation.navigate('Home')}>
                         <XMarkIcon color="white" size={30} />
